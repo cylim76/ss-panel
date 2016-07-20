@@ -64,7 +64,7 @@
 
 
 
-{include file='admin/footer.tpl'}
+
 
 <script>
 	$(document).ready(function () {
@@ -102,3 +102,5 @@
 		});
 	});
 </script>
+
+{include file='admin/footer.tpl'}
