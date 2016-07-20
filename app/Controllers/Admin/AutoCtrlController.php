@@ -18,7 +18,7 @@ class AutoCtrlController extends AdminController
     }
 
     public function create($request, $response, $args){
-        return $this->view()->display('admin/autoctrl/add.tpl');
+        return $this->view()->display('admin/autoctrl/create.tpl');
     }
 
     public function add($request, $response, $args){
