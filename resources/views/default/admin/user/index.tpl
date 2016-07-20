@@ -29,7 +29,7 @@
                                 <th>加密</th>
                                 <th>已用流量/总流量</th>
                                 <th>最后在线时间</th>
-                                <th>最后签到时间</th>
+                                <!--<th>最后签到时间</th>-->
                                 <th>注册时间</th>
                                 <th>到期时间</th>
                                 <th>注册IP</th>
@@ -54,7 +54,7 @@
                                 <td>{$user->method}</td>
                                 <td>{$user->usedTraffic()}/{$user->enableTraffic()}</td>
                                 <td>{$user->lastSsTime()}</td>
-                                <td>{$user->lastCheckInTime()}</td>
+                                <!--<td>{$user->lastCheckInTime()}</td>-->
                                 <th>{$user->reg_date}</th>
                                 <th>{$user->expire_at}</th>
                                 <th>{$user->reg_ip}</th>
