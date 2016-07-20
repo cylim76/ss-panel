@@ -32,6 +32,17 @@ CREATE TABLE `sp_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+DROP TABLE IF EXISTS `autoctrl`;
+CREATE TABLE `autoctrl` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `type` int NOT NULL,
+  `value` longtext NOT NULL,
+  `sign` longtext NOT NULL,
+  `datetime` bigint NOT NULL, 
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS `ss_invite_code`;
 CREATE TABLE `ss_invite_code` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
