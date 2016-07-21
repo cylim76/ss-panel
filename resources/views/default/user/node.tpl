@@ -57,18 +57,21 @@
                                                         class="pull-right badge bg-blue">{$node->server}</span></a></li>
                                         <li><a href="./node/{$node->id}">连接端口 <span
                                                     class="pull-right badge bg-aqua">{$user->port}</span></a></li>
-                                        <li><a href="./node/{$node->id}">协议插件 <span
-                                                       class="pull-right badge bg-aqua">{$user->protocol}</span></a></li>
+                                        <!--<li><a href="./node/{$node->id}">协议插件 <span
+                                                       class="pull-right badge bg-aqua">{$user->protocol}</span></a></li>-->
 <!--                                        <li><a href="./node/{$node->id}">协议参数 <span
                                                        class="pull-right badge bg-aqua">{$user->protocol_param}</span></a></li> -->
-                                        <li><a href="./node/{$node->id}">混淆插件 <span
+                                        <!--<li><a href="./node/{$node->id}">混淆插件 <span
                                                        class="pull-right badge bg-aqua">{$user->obfs}</span></a></li>
                                         {if $user->obfs=='http_post' || $user->obfs=='http_simple' || $user->obfs=='tls1.2_ticket_auth' }
                                         <li><a href="./node/{$node->id}">混淆参数 <span
                                                        class="pull-right badge bg-aqua">{$user->obfs_param}&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
-                                        {/if}               
+                                        {/if} -->              
                                         <li><a href="./node/{$node->id}">加密方式 <span
                                                         class="pull-right badge bg-aqua">{$user->method}</span></a></li>
+                                        <li><a href="./node/{$node->id}">Uptime <span
+                                                        class="pull-right badge bg-aqua">{$node->getNodeUptime()}</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
@@ -81,11 +84,8 @@
                                         </li>
                                         <li><a href="./node/{$node->id}">产生流量 <span
                                                         class="pull-right badge bg-green">{$node->getTrafficFromLogs()}</span></a>
-                                        <li><a href="./node/{$node->id}">负载: <span
+                                        <li><a href="./node/{$node->id}">负载 <span
                                                         class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a></li>                                                         
-                                        </li>
-                                        <li><a href="./node/{$node->id}">Uptime: <span
-                                                        class="pull-right badge bg-green">{$node->getNodeUptime()}</span></a>
                                         </li>
                                     </ul>
                                 </div>
