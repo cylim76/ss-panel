@@ -8,6 +8,7 @@
 		</h1>
 	</section>
 	<section class="content">
+		<div class="row">
 		<div class="col-lg-12 col-lg-push-0 col-sm-10 col-sm-push-1">
 			<section class="content-inner margin-top-no">
 
@@ -56,15 +57,10 @@
 			</section>
 
 		</div>
-
+	</div>
 </section>
 </div>
 
-
-
-
-
-{include file='admin/footer.tpl'}
 
 <script>
 	$(document).ready(function () {
@@ -102,3 +98,5 @@
 		});
 	});
 </script>
+
+{include file='admin/footer.tpl'}

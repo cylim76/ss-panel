@@ -29,6 +29,7 @@
                                 <th>流量比例</th>
                                 <th>是否显示</th>
                                 <th>节点状态</th>
+                                <th>在线人数</th>
                                 <th>描述</th>
                                 <th>备注</th>
                                 <th>排序</th>
@@ -45,6 +46,7 @@
                                 <td>{$node->traffic_rate}</td>
                                 <td>{if $node->type==1}显示{else}隐藏{/if}</td>
                                 <td>{$node->status}</td>
+                                <td>{$node->getOnlineUserCount()}</td>
                                 <td>{$node->info}</td>
                                 <td>{$node->note}</td>
                                 <td>{$node->sort}</td>
