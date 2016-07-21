@@ -95,12 +95,7 @@ $app->group('/admin', function () {
     $this->put('/node/{id}', 'App\Controllers\Admin\NodeController:update');
     $this->delete('/node/{id}', 'App\Controllers\Admin\NodeController:delete');
     $this->get('/node/{id}/delete', 'App\Controllers\Admin\NodeController:deleteGet');
-    
-   //Remote AutoControl
-    $this->get('/autoctrl', 'App\Controllers\Admin\AutoCtrlController:index');
-    $this->get('/autoctrl/create', 'App\Controllers\Admin\AutoCtrlController:create');
-    $this->post('/autoctrl', 'App\Controllers\Admin\AutoCtrlController:add');
-    $this->delete('/autoctrl', 'App\Controllers\Admin\AutoCtrlController:delete');    
+     
 
     // User Mange
     $this->get('/user', 'App\Controllers\Admin\UserController:index');
