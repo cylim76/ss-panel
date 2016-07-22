@@ -29,7 +29,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>用户ID</th>
-                                <th>用户名</th>
+                                <th>用户昵称</th>
                                 <th>使用节点</th>
                                 <th>倍率</th>
                                 <th>实际使用流量</th>
