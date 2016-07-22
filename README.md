@@ -18,9 +18,7 @@ Please visit [releases pages](https://github.com/orvice/ss-panel/releases) to do
 
 ## Supported Server
 
-* [shadowsocks manyuser](https://github.com/mengskysama/shadowsocks/tree/manyuser)
 * [shadowsocksrss manyuser](https://github.com/breakwa11/shadowsocks/tree/manyuser)
-* [shadowsocks-go mu](https://github.com/orvice/shadowsocks-go)
 
 
 ## Install
@@ -36,8 +34,9 @@ mv ss-panel/.git . && rm -rf ss-panel && git reset --hard
 ### Step 1
 
 ```
-$ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar  install
+curl -sS https://getcomposer.org/installer | php
+php composer.phar  install
+php composer.phar  update
 ```
 
 ### Step 2
@@ -54,7 +53,7 @@ chmod -R 777 storage
 
 ### Step 3
 
-Import the sql to you mysql database.
+Import the sql to your mysql database.
 
 ### Step 4
 
@@ -71,8 +70,11 @@ location / {
 }
     
 ```
-
 ### Step 5 Config
+add crontab mission:
+0 0 * * * php /home/wwwroot/ss-panel/xcat dailyjob
+
+### Step 6 Config
 
 view config guide on [wiki](https://github.com/orvice/ss-panel/wiki/v3-Config)
 
