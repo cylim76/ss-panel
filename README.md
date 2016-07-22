@@ -18,7 +18,7 @@ Please visit [releases pages](https://github.com/orvice/ss-panel/releases) to do
 
 ## Supported Server
 
-* [shadowsocksrss manyuser](https://github.com/breakwa11/shadowsocks/tree/manyuser)
+* [shadowsocksrss manyuser](https://github.com/monokoo/shadowsocks/tree/manyuser)
 
 
 ## Install
