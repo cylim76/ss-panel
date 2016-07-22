@@ -71,8 +71,11 @@ location / {
     
 ```
 ### Step 5 Config
+
 add crontab mission:
+```
 0 0 * * * php /home/wwwroot/ss-panel/xcat dailyjob
+```
 
 ### Step 6 Config
 
