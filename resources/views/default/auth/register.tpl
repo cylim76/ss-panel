@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group has-feedback">
-            <button type="submit" id="reg" class="btn btn-primary btn-block btn-flat">同意服务条款并提交注册</button>
+            <button type="submit" id="reg" class="btn btn-info btn-block btn-flat">同意服务条款并提交注册</button>
         </div>
 
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">

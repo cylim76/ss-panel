@@ -147,6 +147,16 @@
 													<input class="form-control" id="traffic_usage" type="text" value="{$user->usedTraffic()}" readonly>
 												</div>
 											</div>
+											
+											<div class="form-group">
+												<label class="col-sm-3 control-label">自动重置流量日</label>
+
+
+												<div class="col-sm-9">
+													<input class="form-control" id="auto_reset_day" type="date" value="{$user->auto_reset_day}">
+												</div>
+											</div>
+											
 										</div>
 										<div class="row">
 											<legend>邀请</legend>
@@ -338,6 +348,7 @@
 								port: $("#port").val(),
 								passwd: $("#passwd").val(),
 								transfer_enable: $("#transfer_enable").val(),
+								auto_reset_day: $("#auto_reset_day").val(),
 								invite_num: $("#invite_num").val(),
 								protocol: $("#protocol").val(),
 								protocol_param: $("#protocol_param").val(),

@@ -26,7 +26,7 @@
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button id="login" type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+                <button id="login" type="submit" class="btn btn-info btn-block btn-flat">登录</button>
             </div><!-- /.col -->
         </div>
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
