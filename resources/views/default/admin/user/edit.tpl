@@ -152,8 +152,10 @@
 												<label class="col-sm-3 control-label"><p Title="系统会在该日将已使用流量重置为0">自动重置流量日</p></label>
 												
 												<div class="col-sm-9">
-													<input class="form-control" id="auto_reset_day" type="number" value="{$user->auto_reset_day}">
-													<div class="input-group-addon">日</div>
+													<div class="input-group">
+														<input class="form-control" id="auto_reset_day" type="number" value="{$user->auto_reset_day}">
+														<div class="input-group-addon">日</div>
+													</div>
 												</div>
 											</div>
 											
