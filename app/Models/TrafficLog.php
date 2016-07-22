@@ -14,6 +14,20 @@ class TrafficLog extends Model
         return Node::find($this->attributes['node_id']);
     }
 
+	public function user()
+    {
+        $user = User::where("id",$this->attributes['user_id'])->first();
+		    if($user == NULL)
+		    {
+						TrafficLog::where('id','=',$this->attributes['id'])->delete();
+						return null;
+				}
+        else
+				{
+						return $user;
+				}
+    }
+    
     public function totalUsed()
     {
         return Tools::flowAutoShow($this->attributes['u'] + $this->attributes['d']);

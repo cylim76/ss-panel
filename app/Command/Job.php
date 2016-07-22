@@ -15,23 +15,17 @@ class Job
 	
 		public static function DailyJob()
     {
-		
-		
-		$users = User::all();
-        foreach($users as $user){
-			
-			$user->last_day_t=($user->u+$user->d);
-			$user->save();
 				
+			$users = User::all();
+			foreach($users as $user){
 				
-			if(date("d")==$user->auto_reset_day)
-			{
-				$user->u=0;
-				$user->d=0;
-				$user->usedTraffic()=0;
-				$user->save();
+				if(date("d")==$user->auto_reset_day)
+				{
+					$user->u=0;
+					$user->d=0;
+					$user->save();
+				}
 			}
-		}
 		}	
 
 }
