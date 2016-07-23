@@ -6,7 +6,7 @@
     <section class="content-header">
         <h1>
             用户签到记录
-            <small>Traffic Log</small>
+            <small>CheckIn Log</small>
         </h1>
     </section>
 
@@ -22,6 +22,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>用户</th>
+                                <th>用户昵称</th>
                                 <th>获得流量</th>
                                 <th>签到时间</th>
                             </tr>

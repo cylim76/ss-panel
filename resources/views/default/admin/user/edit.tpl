@@ -42,7 +42,7 @@
 
 									<fieldset class="col-sm-6">
 										<div class="row">
-											<legend>帐号信息</legend>
+											<legend>帐号信息<small>({$user->user_name})</small></legend>
 
 
 											<div class="form-group">
@@ -147,6 +147,18 @@
 													<input class="form-control" id="traffic_usage" type="text" value="{$user->usedTraffic()}" readonly>
 												</div>
 											</div>
+											
+											<div class="form-group">
+												<label class="col-sm-3 control-label"><p Title="系统会在该日将已使用流量重置为0">自动重置流量日</p></label>
+												
+												<div class="col-sm-9">
+													<div class="input-group">
+														<input class="form-control" id="auto_reset_day" type="number" value="{$user->auto_reset_day}">
+														<div class="input-group-addon">日</div>
+													</div>
+												</div>
+											</div>
+											
 										</div>
 										<div class="row">
 											<legend>邀请</legend>
@@ -338,6 +350,7 @@
 								port: $("#port").val(),
 								passwd: $("#passwd").val(),
 								transfer_enable: $("#transfer_enable").val(),
+								auto_reset_day: $("#auto_reset_day").val(),
 								invite_num: $("#invite_num").val(),
 								protocol: $("#protocol").val(),
 								protocol_param: $("#protocol_param").val(),

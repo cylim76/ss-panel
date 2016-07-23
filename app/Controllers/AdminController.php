@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CheckInLog;
+use App\Models\User;
 use App\Models\InviteCode;
 use App\Models\TrafficLog;
 use App\Services\Analytics;

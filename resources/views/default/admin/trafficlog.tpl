@@ -28,7 +28,8 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
-                                <th>用户</th>
+                                <th>用户ID</th>
+                                <th>用户昵称</th>
                                 <th>使用节点</th>
                                 <th>倍率</th>
                                 <th>实际使用流量</th>
@@ -39,6 +40,7 @@
                                 <tr>
                                     <td>#{$log->id}</td>
                                     <td>{$log->user_id}</td>
+                                    <td>{$log->user()->user_name}</td>
                                     <td>{$log->node()->name}</td>
                                     <td>{$log->rate}</td>
                                     <td>{$log->totalUsed()}</td>

@@ -45,6 +45,7 @@ class UserController extends AdminController
         }
         $user->port = $request->getParam('port');
         $user->transfer_enable = Tools::toGB($request->getParam('transfer_enable'));
+        $user->auto_reset_day = $request->getParam('auto_reset_day');
         $user->invite_num = $request->getParam('invite_num');
         $user->protocol = $request->getParam('protocol');
 		    $user->protocol_param = $request->getParam('protocol_param');

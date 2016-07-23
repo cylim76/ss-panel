@@ -110,6 +110,7 @@ CREATE TABLE `user` (
   `u` bigint(20) NOT NULL,
   `d` bigint(20) NOT NULL,
   `transfer_enable` bigint(20) NOT NULL,
+  `auto_reset_day` int(11) NOT NULL DEFAULT '0',
   `port` int(11) NOT NULL,
   `switch` tinyint(4) NOT NULL DEFAULT '1',
   `enable` tinyint(4) NOT NULL DEFAULT '1',
