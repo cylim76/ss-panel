@@ -17,18 +17,7 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
         </form>
-        <div class="row">
-            <div class="col-xs-8">
-                <div class="checkbox icheck">
-                    <label>
-                        <input id="remember_me" value="week" type="checkbox"> 记住我
-                    </label>
-                </div>
-            </div><!-- /.col -->
-            <div class="col-xs-4">
-                <button id="login" type="submit" class="btn btn-info btn-block btn-flat">登录</button>
-            </div><!-- /.col -->
-        </div>
+        <button id="login" type="submit" class="btn btn-info btn-block btn-flat">登录</button>
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
             <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
             <h4><i class="icon fa fa-info"></i> 登录成功!</h4>
@@ -75,7 +64,7 @@
                 data:{
                     email: $("#email").val(),
                     passwd: $("#passwd").val(),
-                    remember_me: $("#remember_me").val()
+                    //remember_me: $("#remember_me").val()
                 },
                 success:function(data){
                     if(data.ret == 1){
