@@ -46,7 +46,7 @@ class AuthController extends BaseController
         $email = $request->getParam('email');
         $email = strtolower($email);
         $passwd = $request->getParam('passwd');
-        $rememberMe = $request->getParam('remember_me');
+        //$rememberMe = $request->getParam('remember_me');
 
         // Handle Login
         $user = User::where('email', '=', $email)->first();
@@ -66,9 +66,9 @@ class AuthController extends BaseController
         }
         // @todo
         $time = 3600 * 24;
-        if ($rememberMe) {
-            $time = 3600 * 24 * 7;
-        }
+        //if ($rememberMe) {
+        //    $time = 3600 * 24 * 7;
+        //}
         Logger::info("login user $user->id ");
         Auth::login($user->id, $time);
 
