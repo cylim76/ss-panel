@@ -23,7 +23,7 @@
       </div>
       <div class="checkbox m-b-md m-t-none">
        	 <label class="i-checks">
-         		 <input type="checkbox" id="remember_me" value="week"><i></i>记住密码
+         		 <input type="checkbox" id="remember_me" value="day"><i></i>记住密码
        	 </label>
      	</div> 
     </form>
