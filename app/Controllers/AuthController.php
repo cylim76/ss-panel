@@ -26,6 +26,7 @@ class AuthController extends BaseController
     const PasswordTooShort = 511;
     const PasswordNotEqual = 512;
     const EmailUsed = 521;
+    const Agreetos = 571;
 
     // Login Error Code
     const UserNotExist = 601;
@@ -97,7 +98,9 @@ class AuthController extends BaseController
         $repasswd = $request->getParam('repasswd');
         $code = $request->getParam('code');
         $verifycode = $request->getParam('verifycode');
-
+        $agree = $request->getParam('agree');
+ 
+        
         // check code
         $c = InviteCode::where('code', $code)->first();
         if ($c == null) {
@@ -105,7 +108,7 @@ class AuthController extends BaseController
             $res['error_code'] = self::WrongCode;
             $res['msg'] = "邀请码无效";
             return $this->echoJson($response, $res);
-        }
+        }        
 
         // check email format
         if (!Check::isEmailLegal($email)) {
@@ -114,6 +117,7 @@ class AuthController extends BaseController
             $res['msg'] = "邮箱无效";
             return $this->echoJson($response, $res);
         }
+        
         // check pwd length
         if (strlen($passwd) < 8) {
             $res['ret'] = 0;
@@ -129,7 +133,15 @@ class AuthController extends BaseController
             $res['msg'] = "两次密码输入不符";
             return $this->echoJson($response, $res);
         }
-
+        
+				// check  tos check box
+        if ($agree) {
+            $res['ret'] = 0;
+            $res['error_code'] = self::Agreetos;
+            $res['msg'] = "请阅读并同意服务条款";
+            return $this->echoJson($response, $res);
+        }
+        
         // check email
         $user = User::where('email', $email)->first();
         if ($user != null) {
