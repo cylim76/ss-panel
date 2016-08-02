@@ -171,7 +171,6 @@
 													<option value="verify_simple" {if $user->protocol=="verify_simple"}selected="selected"{/if}>verify_simple</option>
 													<option value="verify_deflate" {if $user->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
 													<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
-													<option value="auth_simple" {if $user->protocol=="auth_simple"}selected="selected"{/if}>auth_simple</option>
 													<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
 													<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
 													<option value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
@@ -185,7 +184,7 @@
 
 
 											<div class="col-md-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_simple" && $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -200,7 +199,6 @@
 													<option value="http_post_compatible" {if $user->obfs=="http_post_compatible"}selected="selected"{/if}>http_post_compatible</option>
 													<option value="http_simple" {if $user->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
 													<option value="http_simple_compatible" {if $user->obfs=="http_simple_compatible"}selected="selected"{/if}>http_simple_compatible</option>
-													<option value="tls_simple" {if $user->obfs=="tls_simple"}selected="selected"{/if}>tls_simple</option>
 													<option value="random_head" {if $user->obfs=="random_head"}selected="selected"{/if}>random_head</option>
 													<option value="tls1.0_session_auth" {if $user->obfs=="tls1.0_session_auth"}selected="selected"{/if}>tls1.0_session_auth</option>
 													<option value="tls1.0_session_auth_compatible" {if $user->obfs=="tls1.0_session_auth_compatible"}selected="selected"{/if}>tls1.0_session_auth_compatible</option>

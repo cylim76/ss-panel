@@ -86,7 +86,6 @@
 								<option value="verify_simple" {if $node->protocol=="verify_simple"}selected="selected"{/if}>verify_simple</option>
 								<option value="verify_deflate" {if $node->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
 								<option value="verify_sha1" {if $node->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
-								<option value="auth_simple" {if $node->protocol=="auth_simple"}selected="selected"{/if}>auth_simple</option>
 								<option value="auth_sha1" {if $node->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
 								<option value="auth_sha1_compatible" {if $node->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
 								<option value="auth_sha1_v2" {if $node->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
@@ -100,7 +99,7 @@
 
 
 						<div class="col-md-9">
-							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_simple" && $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"} disabled="disabled"{/if}>
+							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"} disabled="disabled"{/if}>
 						</div>
 					</div>
 
@@ -116,7 +115,6 @@
 								<option value="http_post_compatible" {if $node->obfs=="http_post_compatible"}selected="selected"{/if}>http_post_compatible</option>
 								<option value="http_simple" {if $node->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
 								<option value="http_simple_compatible" {if $node->obfs=="http_simple_compatible"}selected="selected"{/if}>http_simple_compatible</option>
-								<option value="tls_simple" {if $node->obfs=="tls_simple"}selected="selected"{/if}>tls_simple</option>
 								<option value="random_head" {if $node->obfs=="random_head"}selected="selected"{/if}>random_head</option>
 								<option value="tls1.0_session_auth" {if $node->obfs=="tls1.0_session_auth"}selected="selected"{/if}>tls1.0_session_auth</option>
 								<option value="tls1.0_session_auth_compatible" {if $node->obfs=="tls1.0_session_auth_compatible"}selected="selected"{/if}>tls1.0_session_auth_compatible</option>
