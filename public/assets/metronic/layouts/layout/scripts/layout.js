@@ -135,7 +135,7 @@ var Layout = function () {
     // Handle sidebar menu
     var handleSidebarMenu = function () {
         // offcanvas mobile menu 
-        $('.page-sidebar-mobile-offcanvas .responsive-toggler').click(function() {
+        $('.page-sidebar-mobile-offcanvas .responsive-toggler').click(function(e) {
             $('body').toggleClass('page-sidebar-mobile-offcanvas-open');
             e.preventDefault();
             e.stopPropagation();
