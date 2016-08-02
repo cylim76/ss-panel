@@ -19,7 +19,21 @@ class CheckInLog extends Model
     {
         return Tools::flowAutoShow($this->attributes['traffic']);
     }
-
+    
+		public function user()
+    {
+        $user = User::where("id",$this->attributes['user_id'])->first();
+		    if($user == NULL)
+		    {
+						TrafficLog::where('id','=',$this->attributes['id'])->delete();
+						return null;
+				}
+        else
+				{
+						return $user;
+				}
+    }
+ 
     /**
      * @return mixed
      */

@@ -23,8 +23,15 @@ class PasswordController extends BaseController
     {
         $email = $request->getParam('email');
         // check limit
+        
+        if ($email == null) {
+            $rs['ret'] = 0;
+            $rs['msg'] = '请输入邮箱.';
+            return $response->getBody()->write(json_encode($rs));
+        }
 
         // send email
+        $email = $request->getParam('email');
         $user = User::where('email', $email)->first();
         if ($user == null) {
             $rs['ret'] = 0;

@@ -40,6 +40,14 @@ class NodeController extends AdminController
 		$node->type = $request->getParam('type');
 		$node->status = $request->getParam('status');
 		$node->sort = $request->getParam('sort');
+		
+        
+    if (!$node->server) {
+        $rs['ret'] = 0;
+        $rs['msg'] = '请输入节点服务器地址.';
+        return $response->getBody()->write(json_encode($rs));
+    }
+        		
 		if (!$node->save()) {
 			$rs['ret'] = 0;
 			$rs['msg'] = "添加失败";
