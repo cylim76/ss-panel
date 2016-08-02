@@ -45,7 +45,7 @@
                       </div>
                   </div>
                   <div class="portlet-body">
-                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls_simple' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_simple' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2'}
+                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2'}
                         <p> 当前模式仅支持带有混淆协议的客户端 </p>
                         <input id="ss-qr-text" class="form-control" value="{$ssqr_s}">
                     {else}
@@ -59,7 +59,7 @@
             	<!-- END Portlet PORTLET-->
      		</div>	
             
-        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls_simple' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_simple' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
+        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
@@ -175,7 +175,7 @@
         <script src="/assets/public/js/jquery.qrcode.js" type="text/javascript"></script>
         <script>
         	 
-            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls_simple' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_simple' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}
+            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}
           
             var text_qrcode = '{$ssqr_s}';
             jQuery('#ss-qr').qrcode({
