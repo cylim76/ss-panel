@@ -20,8 +20,8 @@
                         {$logs->render()}
                         <table class="table table-hover">
                             <tr>
-                                <th>ID</th>
-                                <th>用户</th>
+                                <th>序号</th>
+                                <th>用户ID</th>
                                 <th>用户昵称</th>
                                 <th>获得流量</th>
                                 <th>签到时间</th>
@@ -30,6 +30,7 @@
                                 <tr>
                                     <td>#{$log->id}</td>
                                     <td>{$log->user_id}</td>
+                                    <td>{$log->user()->user_name}</td>
                                     <td>{$log->traffic()}</td>
                                     <td>{$log->CheckInTime()}</td>
                                 </tr>

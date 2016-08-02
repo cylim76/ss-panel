@@ -24,8 +24,8 @@
                         <table class="table table-striped table-hover">
                         	<thead>
                             <tr>
-                                <th scope="col style="width:70px !important"">ID</th>
-                                <th scope="col">用户</th>
+                                <th scope="col style="width:70px !important"">序号</th>
+                                <th scope="col">用户ID</th>
                                 <th scope="col">用户昵称</th>
                                 <th scope="col">获得流量</th>
                                 <th scope="col">签到时间</th>
