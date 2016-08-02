@@ -42,14 +42,7 @@
 </div>
 
 
-<script src="/assets/angulrh/libs/jquery/jquery/dist/jquery.js"></script>
-<script src="/assets/angulrh/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/assets/angulrh/js/ui-load.js"></script>
-<script src="/assets/angulrh/js/ui-jp.config.js"></script>
-<script src="/assets/angulrh/js/ui-jp.js"></script>
-<script src="/assets/angulrh/js/ui-nav.js"></script>
-<script src="/assets/angulrh/js/ui-toggle.js"></script>
-<script src="/assets/angulrh/js/ui-client.js"></script>
+<script src="/assets/public/js/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
         function reset(){
