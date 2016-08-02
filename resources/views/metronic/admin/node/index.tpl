@@ -61,7 +61,7 @@
                 										<td>{$node->sort}</td>
                 										<td>
                 										    <a class="btn btn-outline btn-circle btn-sm purple" href="/admin/node/{$node->id}/edit"><i class="fa fa-pencil"></i>编辑</a>
-                										    <a class="btn btn-outline btn-circle red btn-sm black" data-toggle="confirmation" data-popout="true" data-original-title="" title="确认删除?" id="delete" value="{$node->id}" href="/admin/node/{$node->id}/delete"><i class="fa fa-trash-o"></i>删除</a>
+                										    <a class="btn btn-outline btn-circle red btn-sm black" data-toggle="confirmation" data-popout="true" data-original-title="" title="确认删除?" id="delete_node" value="{$node->id}" href="/admin/node/{$node->id}/delete"><i class="fa fa-trash-o"></i>删除</a>
                 										</td>
                                 </tr>
                             </tbody>
@@ -77,7 +77,7 @@
 
 <script>
     $(document).ready(function(){
-        function delete(){
+        function delete_node(){
             $.ajax({
                 type:"DELETE",
                 url:"/admin/node/",
@@ -109,8 +109,8 @@
                 login();
             }
         });
-        $("#delete").click(function(){
-            delete();
+        $("#delete_node").click(function(){
+            delete_node();
         });
         $("#ok-close").click(function(){
             $("#msg-success").hide(100);

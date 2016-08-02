@@ -70,7 +70,7 @@ class UserController extends AdminController
         return $response->getBody()->write(json_encode($rs));
     }
 
-    public function delete($request, $response, $args)
+    public function delete_user($request, $response, $args)
     {
         $id = $args['id'];
         $user = User::find($id);

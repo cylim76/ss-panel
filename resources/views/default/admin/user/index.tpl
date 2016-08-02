@@ -61,7 +61,7 @@
                                 <th>{$user->ref_by}</th>
                                 <td>
                                     <a class="btn btn-info btn-sm" href="/admin/user/{$user->id}/edit">编辑</a>
-                                    <a class="btn btn-danger btn-sm" id="delete" value="{$user->id}" href="/admin/user/{$user->id}/delete">删除</a>
+                                    <a class="btn btn-danger btn-sm" id="delete_user" value="{$user->id}" href="/admin/user/{$user->id}/delete">删除</a>
                                 </td>
                             </tr>
                             {/foreach}
@@ -78,7 +78,7 @@
 
 <script>
     $(document).ready(function(){
-        function delete(){
+        function delete_user(){
             $.ajax({
                 type:"DELETE",
                 url:"/admin/user/",
@@ -110,8 +110,8 @@
                 login();
             }
         });
-        $("#delete").click(function(){
-            delete();
+        $("#delete_user").click(function(){
+            delete_user();
         });
         $("#ok-close").click(function(){
             $("#msg-success").hide(100);

@@ -105,7 +105,7 @@ class NodeController extends AdminController
 				return $response->getBody()->write(json_encode($rs));
 			}
 
-			public function delete($request, $response, $args)
+			public function delete_node($request, $response, $args)
 			{
 				$id = $args['id'];
 				$node = Node::find($id);
