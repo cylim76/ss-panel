@@ -52,7 +52,7 @@
                                 <td>{$node->sort}</td>
                                 <td>
                                     <a class="btn btn-info btn-sm" href="/admin/node/{$node->id}/edit">编辑</a>
-                                    <a class="btn btn-danger btn-sm" id="delete" value="{$node->id}" href="/admin/node/{$node->id}/delete">删除</a>
+                                    <a class="btn btn-danger btn-sm" id="delete_node" value="{$node->id}" href="/admin/node/{$node->id}/delete">删除</a>
                                 </td>
                             </tr>
                             {/foreach}
@@ -68,7 +68,7 @@
 
 <script>
     $(document).ready(function(){
-        function delete(){
+        function delete_node(){
             $.ajax({
                 type:"DELETE",
                 url:"/admin/node/",
@@ -100,8 +100,8 @@
                 login();
             }
         });
-        $("#delete").click(function(){
-            delete();
+        $("#delete_node").click(function(){
+            delete_node();
         });
         $("#ok-close").click(function(){
             $("#msg-success").hide(100);
