@@ -215,7 +215,6 @@
 			</div>
 			<!-- /.content-wrapper -->
 			
-			<script src="/assets/public/js/jquery.min.js"></script>
 
 			<script>
 				$("#msg-success").hide();

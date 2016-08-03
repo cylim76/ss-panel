@@ -135,7 +135,7 @@
     </div>
     <!-- /.content -->
 </div><!-- /.content-wrapper -->
-<script src="/assets/public/js/jquery.min.js"></script>
+
 <script>
     $(document).ready(function () {
         $("#checkin").click(function () {
