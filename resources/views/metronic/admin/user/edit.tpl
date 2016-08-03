@@ -348,7 +348,7 @@
 			</div>
 			<!-- /.content-wrapper -->
 			
-			<script src="/assets/metronic/global/plugins/jquery.min.js" type="text/javascript"></script>
+
 			<script>
 				$(document).ready(function () {
 					function submit() {

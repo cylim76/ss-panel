@@ -14,24 +14,24 @@
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="/assets/metronic/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/metronic/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/metronic/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/metronic/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.lug.ustc.edu.cn/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="//cdn.bootcss.com/simple-line-icons/2.3.2/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://css.ddnsweb.com/metronic/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="//cdn.bootcss.com/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="/assets/metronic/global/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+        <link href="//cdn.bootcss.com/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="/assets/metronic/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="/assets/metronic/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://css.ddnsweb.com/metronic/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="https://css.ddnsweb.com/metronic/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="/assets/metronic/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/metronic/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-        <link href="/assets/metronic/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://css.ddnsweb.com/metronic/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://css.ddnsweb.com/metronic/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <!-- END THEME LAYOUT STYLES -->
+        <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
         <link rel="shortcut icon" href="/favicon.ico" /> </head>
     <!-- END HEAD -->
 
@@ -62,7 +62,7 @@
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="User Image" class="img-circle" src="https://secure.gravatar.com/avatar/f38dc10e7609ec461e33100eea9ba707" />
+                                    <img alt="User Image" class="img-circle" src="https://css.ddnsweb.com/metronic/global/img/userimage.png" />
                                     <span class="username username-hide-on-mobile"> {$user->user_name} </span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>

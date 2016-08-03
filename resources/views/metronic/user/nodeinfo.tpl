@@ -170,7 +170,7 @@
       </div>
         <!-- /.row -->
         <!-- END PROGRESS BARS -->
-        <script src="/assets/public/js/jquery.min.js" type="text/javascript"></script>
+
         <script src="/assets/public/js/qrcode.js" type="text/javascript"></script>
         <script src="/assets/public/js/jquery.qrcode.js" type="text/javascript"></script>
         <script>
