@@ -126,16 +126,16 @@ class UserController extends BaseController
         
         if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2')
 				{
-					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".base64_encode($ary['password'])."/?obfsparam=".base64_encode($user->obfs_param)."&remarks=".base64_encode($node->name);
-					$ssqr_s_n = "ssr://" . base64_encode($ssurl);				
+					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".Tools::base64_url_encode($ary['password'])."/?obfsparam=".Tools::base64_url_encode($user->obfs_param)."&remarks=".Tools::base64_url_encode($node->name);
+					$ssqr_s_n = "ssr://" . Tools::base64_url_encode($ssurl);				
 					$ssurl = str_replace("_compatible","",$user->obfs).":".str_replace("_compatible","",$user->protocol).":".$ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port']."/".base64_encode($user->obfs_param);
 					$ssqr_s = "ss://" . base64_encode($ssurl);
 					$ssqr = "ss://" . base64_encode($ssurl);										
 				}
 				else
 				{
-					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".base64_encode($ary['password'])."/?obfsparam=".base64_encode($user->obfs_param)."&remarks=".base64_encode($node->name);
-					$ssqr_s_n = "ssr://" . base64_encode($ssurl);					
+					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".Tools::base64_url_encode($ary['password'])."/?obfsparam=".Tools::base64_url_encode($user->obfs_param)."&remarks=".Tools::base64_url_encode($node->name);
+					$ssqr_s_n = "ssr://" . Tools::base64_url_encode($ssurl);					
 					$ssurl = str_replace("_compatible","",$user->obfs).":".str_replace("_compatible","",$user->protocol).":".$ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port']."/".base64_encode($user->obfs_param);
 					$ssqr_s = "ss://" . base64_encode($ssurl);					
 					$ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
