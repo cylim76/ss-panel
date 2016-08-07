@@ -239,6 +239,12 @@ class UserController extends BaseController
         $method = $request->getParam('method');
         $method = strtolower($method);
         $user->updateMethod($method);
+        
+        if ($this->user->custom_method == 0){
+         $res['ret'] = 0;
+         $res['msg'] = "对不起，您无法自定义加密方法";
+         return $this->echoJson($response, $res);
+        }        
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }
@@ -249,6 +255,13 @@ class UserController extends BaseController
         $protocol = $request->getParam('protocol');
         $protocol = strtolower($protocol);
         $user->updateProtocol($protocol);
+        
+        if ($this->user->custom_rss == 0){
+         $res['ret'] = 0;
+         $res['msg'] = "对不起，您无法自定义协议";
+         return $this->echoJson($response, $res);
+        }
+        
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }
@@ -259,6 +272,12 @@ class UserController extends BaseController
         $obfs = $request->getParam('obfs');
         $obfs = strtolower($obfs);
         $user->updateObfs($obfs);
+        
+        if ($this->user->custom_rss == 0){
+         $res['ret'] = 0;
+         $res['msg'] = "对不起，您无法自定义混淆";
+         return $this->echoJson($response, $res);
+        }        
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }        

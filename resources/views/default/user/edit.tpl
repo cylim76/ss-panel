@@ -22,13 +22,13 @@
 
 						<p id="msg-error-p"></p>
 					</div>
-					<div id="ss-msg-success" class="alert alert-success alert-dismissable" style="display:none">
+					<div id="msg-success" class="alert alert-success alert-dismissable" style="display:none">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 						<h4>
 							<i class="icon fa fa-info"></i> 修改成功!</h4>
 
 
-							<p id="ss-msg-success-p"></p>
+							<p id="msg-success-p"></p>
 						</div>
 					</div>
 				</div>
@@ -119,6 +119,11 @@
 										<!-- /.box-header -->
 										<div class="box-body">
 											<div class="form-horizontal">
+                        <div id="ss-msg-success" class="alert alert-success alert-dismissable" style="display:none">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <h4><i class="icon fa fa-info"></i> 修改成功!</h4>
+                                <p id="ss-msg-success-p"></p>
+                        </div>												
 												<div class="form-group">
 													<label class="col-sm-3 control-label">连接密码</label>
 
@@ -275,7 +280,7 @@
 								sspwd: $("#sspwd").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
@@ -305,7 +310,7 @@
 								method: $("#method").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
@@ -334,7 +339,7 @@
 								protocol: $("#protocol").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
@@ -363,7 +368,7 @@
 								obfs: $("#obfs").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {

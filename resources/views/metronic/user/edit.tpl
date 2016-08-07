@@ -24,13 +24,13 @@
 
 						<p id="msg-error-p"></p>
 					</div>
-					<div id="ss-msg-success" class="alert alert-success alert-dismissable" style="display:none">
+					<div id="msg-success" class="alert alert-success alert-dismissable" style="display:none">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 						<h4>
 							<i class="icon fa fa-info"></i> 修改成功!</h4>
 
 
-							<p id="ss-msg-success-p"></p>
+							<p id="msg-success-p"></p>
 						</div>
 					</div>
 				</div>
@@ -109,6 +109,11 @@
                  </div>
                  <div class="portlet-body">
 											<div class="form-horizontal">
+                        <div id="ss-msg-success" class="alert alert-success alert-dismissable" style="display:none">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <h4><i class="icon fa fa-info"></i> 修改成功!</h4>
+                                <p id="ss-msg-success-p"></p>
+                        </div>												
 												<div class="form-group">
 													<label class="col-md-3 control-label bold">连接密码</label>
 
@@ -265,12 +270,12 @@
 								sspwd: $("#sspwd").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
-									$("#ss-msg-error").show();
-									$("#ss-msg-error-p").html(data.msg);
+									$("#msg-error").show();
+									$("#msg-error-p").html(data.msg);
 								}
 							},
 							error: function (jqXHR) {
@@ -295,12 +300,12 @@
 								method: $("#method").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
-									$("#ss-msg-error").show();
-									$("#ss-msg-error-p").html(data.msg);
+									$("#msg-error").show();
+									$("#msg-error-p").html(data.msg);
 								}
 							},
 							error: function (jqXHR) {
@@ -324,12 +329,12 @@
 								protocol: $("#protocol").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
-									$("#ss-msg-error").show();
-									$("#ss-msg-error-p").html(data.msg);
+									$("#msg-error").show();
+									$("#msg-error-p").html(data.msg);
 								}
 							},
 							error: function (jqXHR) {
@@ -353,12 +358,12 @@
 								obfs: $("#obfs").val()
 							},
 							success: function (data) {
-								if (data.ret) {
+								if (data.ret == 1) {
 									$("#ss-msg-success").show();
 									$("#ss-msg-success-p").html(data.msg);
 								} else {
-									$("#ss-msg-error").show();
-									$("#ss-msg-error-p").html(data.msg);
+									$("#msg-error").show();
+									$("#msg-error-p").html(data.msg);
 								}
 							},
 							error: function (jqXHR) {
