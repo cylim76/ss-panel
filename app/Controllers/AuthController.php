@@ -26,7 +26,6 @@ class AuthController extends BaseController
     const PasswordTooShort = 511;
     const PasswordNotEqual = 512;
     const EmailUsed = 521;
-    const Agreetos = 571;
 
     // Login Error Code
     const UserNotExist = 601;
@@ -134,13 +133,6 @@ class AuthController extends BaseController
             return $this->echoJson($response, $res);
         }
         
-				// check  tos check box
-        if ($agree) {
-            $res['ret'] = 0;
-            $res['error_code'] = self::Agreetos;
-            $res['msg'] = "请阅读并同意服务条款";
-            return $this->echoJson($response, $res);
-        }
         
         // check email
         $user = User::where('email', $email)->first();

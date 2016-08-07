@@ -43,11 +43,6 @@
                <span class="glyphicon glyphicon-send form-control-feedback"></span>
             </div>
           </div>
-          <div class="checkbox m-b-md m-t-none">
-            <label class="i-checks">
-              <input type="checkbox" id="agree" ng-model="agree" required><i></i> 同意 <a href="/tos">服务条款</a>
-            </label>
-          </div>
           </form>
           <button type="submit" id="reg" class="btn btn-lg btn-primary btn-block" >同意服务条款并提交注册</button>
           <div class="line line-dashed"></div>
@@ -89,7 +84,6 @@
                     repasswd: $("#repasswd").val(),
                     code: $("#code").val(),
                     verifycode: $("#verifycode").val(),
-                    agree: $("#agree").val()
                 },
                 success: function (data) {
                     if (data.ret == 1) {
