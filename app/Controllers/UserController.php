@@ -238,9 +238,9 @@ class UserController extends BaseController
         $user = Auth::getUser();
         $method = $request->getParam('method');
         $method = strtolower($method);
-        $user->updateMethod($method);
-        
+               
         if ($this->user->custom_method == 1){
+        	$user->updateMethod($method);
         	$res['ret'] = 1;
         	return $this->echoJson($response, $res);
         }        
@@ -254,9 +254,9 @@ class UserController extends BaseController
         $user = Auth::getUser();
         $protocol = $request->getParam('protocol');
         $protocol = strtolower($protocol);
-        $user->updateProtocol($protocol);
-        
+                
         if ($this->user->custom_rss == 1){
+        	$user->updateProtocol($protocol);
         	$res['ret'] = 1;
         	return $this->echoJson($response, $res);
         }        
@@ -270,9 +270,9 @@ class UserController extends BaseController
         $user = Auth::getUser();
         $obfs = $request->getParam('obfs');
         $obfs = strtolower($obfs);
-        $user->updateObfs($obfs);
-        
+                
         if ($this->user->custom_rss == 1){
+        	$user->updateObfs($obfs);
         	$res['ret'] = 1;
         	return $this->echoJson($response, $res);
         }        
