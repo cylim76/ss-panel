@@ -210,8 +210,8 @@
         <!-- /.row -->
         <!-- END PROGRESS BARS -->
 
-        <script src="/assets/public/js/qrcode.js" type="text/javascript"></script>
-        <script src="/assets/public/js/jquery.qrcode.js" type="text/javascript"></script>
+        <!--<script src="/assets/public/js/qrcode.js" type="text/javascript"></script>-->
+        <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
         <script>
         	 
             {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}
