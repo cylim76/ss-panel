@@ -33,6 +33,8 @@ class XCat
                 return $this->resetTraffic();
             case("dailyjob"):
 								return Job::DailyJob();
+            case("sendexpiredMail"):
+                return DailyMail::sendexpiredMail();								
             case("sendDiaryMail"):
                 return DailyMail::sendDailyMail();
             default:
