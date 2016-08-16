@@ -75,7 +75,7 @@ location / {
 add crontab mission:
 ```
 0 0 * * * php /home/wwwroot/ss-panel/xcat dailyjob
-0 8 * * * php /home/wwwroot/ddnsweb.com/xcat sendexpiredMail
+0 8 * * * php /home/wwwroot/ss-panel/xcat sendexpiredMail
 ```
 
 ### Step 6 Config
