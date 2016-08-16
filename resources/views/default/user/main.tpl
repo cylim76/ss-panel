@@ -54,7 +54,6 @@
                             <!-- User image -->
                             <li class="user-header">
                                 <img src="{$user->gravatar}" class="img-circle" alt="User Image"/>
-
                                 <p>
                                     {$user->email}
                                     <small>加入时间：{$user->regDate()}</small>

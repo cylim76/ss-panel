@@ -46,14 +46,19 @@
                   </div>
                   <div class="portlet-body">
                   	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2'}
-                        <p> 当前模式仅支持带有混淆协议的客户端 </p>
-                        <input id="ss-qr-text" class="form-control" value="{$ssqr_s}">
-                    {else}
-                        <input id="ss-qr-text" class="form-control" value="{$ssqr_s}">
+                        <p>当前模式仅支持带有混淆协议的客户端</p>
+                        <input id="ss-qr-text" class="form-control" value="{$ssqr_s_n}">
                         <p></p>
-                        <p> 当前模式支持Andriod等原版协议客户端 </p>
-                        <a href="{$ssqr}">Android 手机上用默认浏览器打开点我就可以直接添加 </a>
-                    {/if}                  	
+                        <p> 当前模式仅支持Andriod带混淆协议的改版客户端 </p>
+                        <a href="{$ssqr_s_n}">Android 手机上用默认浏览器打开点我就可以直接添加 </a>                        
+                    {else}
+                        <input id="ss-qr-text" class="form-control" value="{$ssqr}">
+                        <p></p>
+                        <p>当前模式支持Andriod等原版及改版协议客户端</p>
+                        <a href="{$ssqr}"/>Android 手机上用默认浏览器打开点我就可以直接添加到原版客户端</a>
+                        <p></p>
+                        <a href="{$ssqr_s_n}">Android 手机上用默认浏览器打开点我就可以直接添加到改版客户端 </a>                        
+                    {/if}                	
                  	</div>                                    	
             	</div>
             	<!-- END Portlet PORTLET-->
@@ -66,7 +71,24 @@
                   <div class="portlet-title">
                       <div class="caption">
                       		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> 配置二维码 </strong></span>
+                          <span class="caption-subject bold"><strong> 新版ShadowsocksR配置二维码(V3.8.3以后版本) </strong></span>
+                      </div>
+                  </div>
+                  <div class="portlet-body">
+                  	  <div class="text-center">
+                          <div id="ss-qr-n"></div>
+                      </div>                  	
+                 	</div>                                    	
+            	</div>
+            	<!-- END Portlet PORTLET-->
+     		</div>
+        <div class="col-md-6">
+              <!-- BEGIN Portlet PORTLET-->
+              <div class="portlet light bordered">
+                  <div class="portlet-title">
+                      <div class="caption">
+                      		<i class="fa fa-qrcode"></i>
+                          <span class="caption-subject bold"><strong> 旧版ShadowsocksR配置二维码 </strong></span>
                       </div>
                   </div>
                   <div class="portlet-body">
@@ -76,7 +98,7 @@
                  	</div>                                    	
             	</div>
             	<!-- END Portlet PORTLET-->
-     		</div>
+     		</div>     		
      		{else}
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
@@ -84,7 +106,24 @@
                   <div class="portlet-title">
                       <div class="caption">
                       		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> ShadowsocksR配置二维码 </strong></span>
+                          <span class="caption-subject bold"><strong> 新版ShadowsocksR配置二维码(V3.8.3以后版本) </strong></span>
+                      </div>
+                  </div>
+                  <div class="portlet-body">
+                  	  <div class="text-center">
+                          <div id="ss-qr-n"></div>
+                      </div>                  	
+                 	</div>                                    	
+            	</div>
+            	<!-- END Portlet PORTLET-->
+     		</div>
+        <div class="col-md-6">
+              <!-- BEGIN Portlet PORTLET-->
+              <div class="portlet light bordered">
+                  <div class="portlet-title">
+                      <div class="caption">
+                      		<i class="fa fa-qrcode"></i>
+                          <span class="caption-subject bold"><strong> 旧版ShadowsocksR配置二维码 </strong></span>
                       </div>
                   </div>
                   <div class="portlet-body">
@@ -94,7 +133,7 @@
                  	</div>                                    	
             	</div>
             	<!-- END Portlet PORTLET-->
-     		</div>
+     		</div>     		
      		<div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
@@ -171,27 +210,37 @@
         <!-- /.row -->
         <!-- END PROGRESS BARS -->
 
-        <script src="/assets/public/js/qrcode.js" type="text/javascript"></script>
-        <script src="/assets/public/js/jquery.qrcode.js" type="text/javascript"></script>
+        <!--<script src="/assets/public/js/qrcode.js" type="text/javascript"></script>-->
+        <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
         <script>
         	 
             {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.0_session_auth' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || ( $user->obfs=='plain' && $user->protocol=='origin')}
           
+            var text_qrcode_n = '{$ssqr_s_n}';
+            jQuery('#ss-qr-n').qrcode({
+                "text": text_qrcode_n
+            });
+            
             var text_qrcode = '{$ssqr_s}';
             jQuery('#ss-qr').qrcode({
                 "text": text_qrcode
-            });
+            });            
           
             {else} 
             	
+            var text_qrcode_n = '{$ssqr_s_n}';
+	          jQuery('#ss-qr-n').qrcode({
+		            "text": text_qrcode_n
+	          });
+	          
             var text_qrcode = '{$ssqr_s}';
 	          jQuery('#ss-qr').qrcode({
 		            "text": text_qrcode
-	          });
+	          });	          
 	          	                     
-            var text_qrcode1 = '{$ssqr}';
+            var text_qrcode_y = '{$ssqr}';
 	          jQuery('#ss-qr-y').qrcode({
-		            "text": text_qrcode1
+		            "text": text_qrcode_y
             });
 	          
 	          {/if}

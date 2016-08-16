@@ -67,10 +67,6 @@
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
-                            				<li>                            				
-                            				    <a> {$user->email} </a>
-                            				    <a><small> 加入时间：{$user->regDate()} </small></a>
-                            				</li>
                                     <li>
                                         <a href="/user/profile">
                                             <i class="icon-user"></i> 个人信息 </a>
