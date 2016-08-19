@@ -26,9 +26,11 @@ class Job
 					$user->save();
 				}
 				
-				if(date("d")==$user->expire_at)
+				if(date("Y-m-d")==$user->expire_at && ($user->user_class!=0 || $user->node_group!=0) )
 				{
-					$user->enable=0;
+					$user->user_class=0;
+					$user->node_group=0;
+					$user->transfer_enable = Tools::toGB(Config::get('defaultTraffic'));
 					$user->save();
 				}				
 			}
