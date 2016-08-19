@@ -25,6 +25,12 @@ class Job
 					$user->d=0;
 					$user->save();
 				}
+				
+				if(date("d")==$user->expire_at)
+				{
+					$user->enable=0;
+					$user->save();
+				}				
 			}
 		}	
 
