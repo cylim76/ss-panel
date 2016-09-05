@@ -30,7 +30,7 @@ class Mail
             case "smtp":
                 return new Smtp();
             case "sendcloud":
- +              return new SendCloud();
+               return new SendCloud();
             case "file":
                 return new File();
             default:
