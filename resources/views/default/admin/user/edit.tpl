@@ -219,6 +219,8 @@
 													<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
 													<option value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
 													<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
+													<option value="auth_sha1_v3" {if $user->protocol=="auth_sha1_v3"}selected="selected"{/if}>auth_sha1_v3</option>
+													<option value="auth_sha1_v3_compatible" {if $user->protocol=="auth_sha1_v3_compatible"}selected="selected"{/if}>auth_sha1_v3_compatible</option>													
 												</select>
 											</div>
 										</div>
@@ -228,7 +230,7 @@
 
 
 											<div class="col-sm-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v3"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -244,8 +246,6 @@
 													<option value="http_simple" {if $user->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
 													<option value="http_simple_compatible" {if $user->obfs=="http_simple_compatible"}selected="selected"{/if}>http_simple_compatible</option>
 													<option value="random_head" {if $user->obfs=="random_head"}selected="selected"{/if}>random_head</option>
-													<option value="tls1.0_session_auth" {if $user->obfs=="tls1.0_session_auth"}selected="selected"{/if}>tls1.0_session_auth</option>
-													<option value="tls1.0_session_auth_compatible" {if $user->obfs=="tls1.0_session_auth_compatible"}selected="selected"{/if}>tls1.0_session_auth_compatible</option>
 													<option value="tls1.2_ticket_auth" {if $user->obfs=="tls1.2_ticket_auth"}selected="selected"{/if}>tls1.2_ticket_auth</option>
 													<option value="tls1.2_ticket_auth_compatible" {if $user->obfs=="tls1.2_ticket_auth_compatible"}selected="selected"{/if}>tls1.2_ticket_auth_compatible</option>
 												</select>
@@ -407,7 +407,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2"){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v3"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

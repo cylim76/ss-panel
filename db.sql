@@ -123,7 +123,7 @@ CREATE TABLE `user` (
   `is_admin` int(2) NOT NULL DEFAULT '0',
   `ref_by` int(11) NOT NULL DEFAULT '0',
   `expire_time` int(11) NOT NULL DEFAULT '0',
-  `method` varchar(64) NOT NULL DEFAULT 'rc4-md5',
+  `method` varchar(64) NOT NULL DEFAULT 'aes-256-cfb',
   `custom_method` tinyint(1) NOT NULL DEFAULT '0',
   `custom_rss` tinyint(1) NOT NULL DEFAULT '0',  
   `protocol` varchar(128) NOT NULL DEFAULT 'origin',

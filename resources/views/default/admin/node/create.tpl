@@ -76,6 +76,8 @@
 														<option value="auth_sha1_compatible">auth_sha1_compatible</option>
 														<option value="auth_sha1_v2">auth_sha1_v2</option>
 														<option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
+														<option value="auth_sha1_v3">auth_sha1_v3</option>
+														<option value="auth_sha1_v3_compatible">auth_sha1_v3_compatible</option>														
 													</select>
 												</div>
 											</div>
@@ -100,8 +102,6 @@
 														<option value="http_simple">http_simple</option>
 														<option value="http_simple_compatible">http_simple_compatible</option>
 														<option value="random_head">random_head</option>
-														<option value="tls1.0_session_auth">tls1.0_session_auth</option>
-														<option value="tls1.0_session_auth_compatible">tls1.0_session_auth_compatible</option>
 														<option value="tls1.2_ticket_auth">tls1.2_ticket_auth</option>
 														<option value="tls1.2_ticket_auth_compatible">tls1.2_ticket_auth_compatible</option>
 													</select>
@@ -342,7 +342,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2"){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v3"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

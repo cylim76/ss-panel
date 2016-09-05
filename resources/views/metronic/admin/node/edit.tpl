@@ -90,6 +90,8 @@
 								<option value="auth_sha1_compatible" {if $node->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
 								<option value="auth_sha1_v2" {if $node->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
 								<option value="auth_sha1_v2_compatible" {if $node->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
+								<option value="auth_sha1_v3" {if $node->protocol=="auth_sha1_v3"}selected="selected"{/if}>auth_sha1_v3</option>
+								<option value="auth_sha1_v3_compatible" {if $node->protocol=="auth_sha1_v3_compatible"}selected="selected"{/if}>auth_sha1_v3_compatible</option>								
 							</select>
 						</div>
 					</div>
@@ -99,7 +101,7 @@
 
 
 						<div class="col-md-9">
-							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"} disabled="disabled"{/if}>
+							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2" && $node->protocol != "auth_sha1_v3"} disabled="disabled"{/if}>
 						</div>
 					</div>
 
@@ -116,8 +118,6 @@
 								<option value="http_simple" {if $node->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
 								<option value="http_simple_compatible" {if $node->obfs=="http_simple_compatible"}selected="selected"{/if}>http_simple_compatible</option>
 								<option value="random_head" {if $node->obfs=="random_head"}selected="selected"{/if}>random_head</option>
-								<option value="tls1.0_session_auth" {if $node->obfs=="tls1.0_session_auth"}selected="selected"{/if}>tls1.0_session_auth</option>
-								<option value="tls1.0_session_auth_compatible" {if $node->obfs=="tls1.0_session_auth_compatible"}selected="selected"{/if}>tls1.0_session_auth_compatible</option>
 								<option value="tls1.2_ticket_auth" {if $node->obfs=="tls1.2_ticket_auth"}selected="selected"{/if}>tls1.2_ticket_auth</option>
 								<option value="tls1.2_ticket_auth_compatible" {if $node->obfs=="tls1.2_ticket_auth_compatible"}selected="selected"{/if}>tls1.2_ticket_auth_compatible</option>
 							</select>
