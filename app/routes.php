@@ -7,7 +7,8 @@ use App\Middleware\Auth;
 use App\Middleware\Guest;
 use App\Middleware\Mu;
 use Slim\App;
-use Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 /***
  * The slim documents: http://www.slimframework.com/docs/objects/router.html
@@ -20,14 +21,27 @@ if (defined("DEBUG")) {
 }
 
 // Make a Slim App
-// $app = new App($c)
-$app = new App([
-    'settings' => [
-        'debug' => $debug,
-        'whoops.editor' => 'sublime'
-    ]
-]);
-$app->add(new WhoopsMiddleware);
+
+$c = new \Slim\Container();
+$c['errorHandler'] = function ($c) {
+    return function ($request, $response, $exception) use ($c) {
+        $filename = BASE_PATH . '/storage/logs/error.log';
+        $log = new Logger('App');
+        $log->pushHandler(new StreamHandler($filename, Logger::WARNING));
+        $log->error($exception->getMessage());
+        foreach ($exception->getTrace() as $key => $row) {
+            if (!isset($row['function']) || !isset($row['line']) || !isset($row['file'])) {
+                $log->error(sprintf("#%s %s  %s ", $key, $row['function'], $row['class']));
+                continue;
+            }
+            $log->error(sprintf("#%s %s %s", $key, $row['file'], $row['line']));
+        }        
+        return $c['response']->withStatus(500)
+            ->withHeader('Content-Type', 'text/html')
+            ->write('Something went wrong!');
+    };
+};
+$app = new App($c);
 
 
 // Home
@@ -52,7 +66,7 @@ $app->group('/user', function () {
     $this->post('/sspwd', 'App\Controllers\UserController:updateSsPwd');
     $this->post('/method', 'App\Controllers\UserController:updateMethod');
     $this->post('/protocol', 'App\Controllers\UserController:updateProtocol');
-    $this->post('/obfs', 'App\Controllers\UserController:updateObfs');        
+    $this->post('/obfs', 'App\Controllers\UserController:updateObfs');
     $this->get('/sys', 'App\Controllers\UserController:sys');
     $this->get('/trafficlog', 'App\Controllers\UserController:trafficLog');
     $this->get('/kill', 'App\Controllers\UserController:kill');

@@ -3,6 +3,9 @@
 namespace App\Services;
 
 use Smarty;
+use Illuminate\Translation\FileLoader;
+use Illuminate\Translation\Translator;
+use Illuminate\Filesystem\Filesystem;
 
 class View
 {
@@ -13,9 +16,20 @@ class View
         $smarty->setcachedir(BASE_PATH.'/storage/framework/smarty/cache/'); //设置缓存文件存放目录
         // add config
         $smarty->assign('config',Config::getPublicConfig());
+        $smarty->assign('lang', Factory::getLang());
         $smarty->assign('user',Auth::getUser());
         $smarty->assign('analyticsCode',DbConfig::get('analytics-code'));
         return $smarty;
     }
 
+    protected static function getLang()
+    {
+        $lang = Config::get('lang');
+        // Prepare the FileLoader
+        $loader = new FileLoader(new Filesystem(), BASE_PATH . '/resources/lang/');
+        // Register the English translator
+        $trans = new Translator($loader, $lang);
+        return $trans;
+    }
+    
 }
