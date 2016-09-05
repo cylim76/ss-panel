@@ -133,14 +133,14 @@
                       							
 																			<div class="col-md-9">
 																				<select class="bs-select form-control" id="method" disabled="disabled">
-																					<option value="aes-256-cfb">aes-256-cfb</option>
+																					<option value="aes-256-cfb"	selected="selected">aes-256-cfb</option>
                       							      <option value="aes-256-ctr">aes-256-ctr</option>
                       							      <option value="camellia-256-cfb">camellia-256-cfb</option>
                       							      <option value="bf-cfb">bf-cfb</option>
                       							      <option value="cast5-cfb">cast5-cfb</option>
                       							      <option value="des-cfb">des-cfb</option>
                       							      <option value="des-ede3-cfb">des-ede3-cfb</option>
-                      							      <option value="rc4-md5" selected="selected">rc4-md5</option>
+                      							      <option value="rc4-md5">rc4-md5</option>
                       							      <option value="rc4-md5-6">rc4-md5-6</option>
                       							      <option value="salsa20">salsa20</option>
                       							      <option value="chacha20">chacha20</option>
