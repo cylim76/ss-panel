@@ -23,8 +23,8 @@
                                 <th>ID</th>
                                 <th>节点</th>
                                 <th>节点地址</th>
-                                <th>默认协议</th>
-                                <th>默认混淆</th>
+                                <th>节点群组</th>
+                                <th>节点等级</th>
                                 <th>默认加密</th>
                                 <th>流量比例</th>
                                 <th>是否显示</th>
@@ -40,8 +40,8 @@
                                 <td>#{$node->id}</td>
                                 <td>{$node->name}</td>
                                 <td>{$node->server}</td>
-                                <td>{$node->protocol}</td>
-                                <td>{$node->obfs}</td>
+                                <td>{$node->node_group}</td>
+                                <td>{$node->node_class}</td>
                                 <td>{$node->method}</td>
                                 <td>{$node->traffic_rate}</td>
                                 <td>{if $node->type==1}显示{else}隐藏{/if}</td>

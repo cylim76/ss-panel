@@ -62,6 +62,12 @@
                             <dd>{$user->usedTraffic()}</dd>
                             <dt>剩余流量</dt>
                             <dd>{$user->unusedTraffic()}</dd>
+		                        <dt>流量重置日</dt>
+		                        {if $user->auto_reset_day == 0 }
+		                        <dd> 您的流量暂不重置</dd>
+		                        {else}
+		                        <dd> 每月{$user->auto_reset_day}日 </dd>
+		                        {/if}                            
                         </dl>
                     </div>
                     <!-- /.box-body -->

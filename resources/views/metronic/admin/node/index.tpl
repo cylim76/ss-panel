@@ -30,8 +30,8 @@
                                     <th scope="col" style="width:70px !important">ID</th>
                 										<th scope="col">节点</th>
                 										<th scope="col">节点地址</th>
-                										<th scope="col">默认协议</th>
-                										<th scope="col">默认混淆</th>
+                										<th scope="col">节点群组</th>
+                										<th scope="col">节点等级</th>
                 										<th scope="col">默认加密</th>
                 										<th scope="col">流量比例</th>
                 										<th scope="col">是否显示</th>
@@ -49,8 +49,8 @@
                                     <td>{$node->id}</td>
                 										<td>{$node->name}</td>
                 										<td>{$node->server}</td>
-                										<td>{$node->protocol}</td>
-                										<td>{$node->obfs}</td>
+                										<td>{$node->node_group}</td>
+                										<td>{$node->node_class}</td>
                 										<td>{$node->method}</td>
                 										<td>{$node->traffic_rate}</td>
                 										<td>{if $node->type==1}显示{else}隐藏{/if}</td>
