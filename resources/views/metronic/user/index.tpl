@@ -119,10 +119,12 @@
                         <dd>{$user->port}</dd>
                         <dt>密码</dt>
                         <dd>{$user->passwd}</dd>
+                        {if $user->protocol != 'origin' || $user->obfs != 'plain'}
                         <dt>协议插件</dt>
                         <dd>{$user->protocol}</dd>
                         <dt>混淆插件</dt>
                         <dd>{$user->obfs}</dd>
+                        {/if}
                         <dt>加密方式</dt>
                         <dd>{$user->method}</dd>
                         <dt>上次使用</dt>
