@@ -41,8 +41,15 @@ class UserController extends AdminController
             $user->pass = Hash::passwordHash($request->getParam('pass'));
         }
         if ($request->getParam('passwd') != '') {
+            $rule = "/^[\w@-\.]{6,16}$/";
+            if(!preg_match($rule,$request->getParam('passwd'))){
+                $rs['ret'] = 0;
+                $rs['msg'] = "SS连接密码不符合规则，只能为6-16位长度，包含数字大小写字母-@_.";
+                return $response->getBody()->write(json_encode($rs));
+            }
             $user->passwd = $request->getParam('passwd');
         }
+
         $user->port = $request->getParam('port');
         $user->transfer_enable = Tools::toGB($request->getParam('transfer_enable'));
         $user->auto_reset_day = $request->getParam('auto_reset_day');
