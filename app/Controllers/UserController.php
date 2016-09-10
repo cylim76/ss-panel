@@ -228,10 +228,10 @@ class UserController extends BaseController
     {
         $user = Auth::getUser();
         $pwd = $request->getParam('sspwd');
-        $rule = "/^[\w@-\.]{6,16}$/";
+        $rule = "/^[\w-\.@#$]{6,16}$/";
         if(!preg_match($rule,$pwd)){
           $res['ret'] = 0;
-          $res['msg'] = "SS连接密码不符合规则，只能为6-16位长度，包含数字大小写字母-@_.";
+          $res['msg'] = "SS连接密码不符合规则，只能为6-16位长度，包含数字大小写字母-._@#$";
           return $this->echoJson($response, $res);
         }
         $user->updateSsPwd($pwd);
