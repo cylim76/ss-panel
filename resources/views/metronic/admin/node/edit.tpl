@@ -123,7 +123,7 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
+<!--					<div class="form-group">
 						<label class="col-md-3 control-label bold" for="obfs_param">默认混淆参数</label>
 
 
@@ -131,7 +131,7 @@
 						<div class="col-md-9">
 							<input class="form-control" id="obfs_param" type="text"  readonly="true" value="{$node->obfs_param}" {if $node->obfs != "http_simple" && $node->obfs != "http_post" && $node->obfs != "tls1.2_ticket_auth"} disabled="disabled"{/if}>
 						</div>
-					</div>
+					</div>-->
 
 					<div class="form-group">
 						<label for="method" class="col-md-3 control-label bold">默认加密方式</label>

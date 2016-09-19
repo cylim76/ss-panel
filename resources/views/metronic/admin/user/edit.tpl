@@ -208,14 +208,14 @@
 											</div>
 										</div>
 
-										<div class="form-group">
+<!--										<div class="form-group">
 											<label class="col-md-3 control-label bold" for="obfs_param">混淆参数</label>
 
 
 											<div class="col-md-9">
 												<input class="form-control" id="obfs_param" type="text" value="{$user->obfs_param}" {if $user->obfs != "http_simple" && $user->obfs != "http_post" && $user->obfs != "tls1.2_ticket_auth"} disabled="disabled"{/if}>
 											</div>
-										</div>
+										</div>-->
 
 										<div class="form-group">
 											<label for="method" class="col-md-3 control-label bold"> 加密方式</label>
@@ -367,7 +367,7 @@
 								protocol: $("#protocol").val(),
 								protocol_param: $("#protocol_param").val(),
 								obfs: $("#obfs").val(),
-								obfs_param: $("#obfs_param").val(),
+								/*obfs_param: $("#obfs_param").val(),*/
 								method: $("#method").val(),
 								custom_method: $("#custom_method").val(),
 								custom_rss: $("#custom_rss").val(),

@@ -119,13 +119,6 @@
 																				</select>
 																			</div>
 																		</div>
-																		<div class="form-group">
-																			<label class="col-md-3 control-label bold" for="obfs_param">默认混淆参数</label>
-                      							
-																			<div class="col-md-9">
-																				<input class="form-control" id="obfs_param" type="text" value="" readonly="true">
-																			</div>
-																		</div>
                       							
 																		<div class="form-group">
 																			<label for="method" class="col-md-3 control-label bold">默认加密方式</label>
