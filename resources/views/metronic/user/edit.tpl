@@ -147,8 +147,8 @@
 																<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
 																<option value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
 																<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
-																<option value="auth_sha1_v3" {if $user->protocol=="auth_sha1_v3"}selected="selected"{/if}>auth_sha1_v3</option>
-																<option value="auth_sha1_v3_compatible" {if $user->protocol=="auth_sha1_v3_compatible"}selected="selected"{/if}>auth_sha1_v3_compatible</option>																
+																<option value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
+																<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>																
 															</select>
 															<div class="input-group-btn">
 																<button type="submit" id="protocol-update" class="btn green btn-outline" {if $user->custom_rss == 0} disabled="disabled" {/if}>修改</button>

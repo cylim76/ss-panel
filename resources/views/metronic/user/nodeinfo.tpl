@@ -45,7 +45,7 @@
                       </div>
                   </div>
                   <div class="portlet-body">
-                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v3'}
+                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4'}
                         <p>当前模式仅支持带有混淆协议的客户端</p>
                         <input id="ss-qr-text" class="form-control" value="{$ssqr_s_n}">
                         <p></p>
@@ -64,7 +64,7 @@
             	<!-- END Portlet PORTLET-->
      		</div>	
             
-        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v3' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
+        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
@@ -214,7 +214,7 @@
         <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
         <script>
         	 
-            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v3' || ( $user->obfs=='plain' && $user->protocol=='origin')}
+            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4' || ( $user->obfs=='plain' && $user->protocol=='origin')}
           
             var text_qrcode_n = '{$ssqr_s_n}';
             jQuery('#ss-qr-n').qrcode({
