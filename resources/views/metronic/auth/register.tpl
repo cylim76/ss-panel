@@ -44,6 +44,7 @@
             </div>
           </div>
           </form>
+          <p class="text-center"><small>没有邀请码? <a href="/code"><strong>点击获取</strong></a></small></p>
           <button type="submit" id="reg" class="btn btn-lg btn-primary btn-block" >同意服务条款并提交注册</button>
           <div class="line line-dashed"></div>
           <p class="text-center"><small>已经注册?</small></p>

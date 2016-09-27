@@ -45,7 +45,7 @@
         </div>
 
         <div class="form-group has-feedback">
-            <p>注册即代表同意<a href="/tos">服务条款</a></p>
+            <p> 注册即代表同意<a href="/tos"> 服务条款</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small> 没有邀请码? <a href="/code"><strong> 点击获取</strong></a></small></p>
         </div>
 
         <div class="form-group has-feedback">
