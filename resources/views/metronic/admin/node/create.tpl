@@ -89,7 +89,8 @@
 																							<option value="auth_sha1_v2">auth_sha1_v2</option>                        
 																							<option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
 																							<option value="auth_sha1_v4">auth_sha1_v4</option>
-																							<option value="auth_sha1_v4_compatible">auth_sha1_v4_compatible</option>																								  
+																							<option value="auth_sha1_v4_compatible">auth_sha1_v4_compatible</option>
+																							<option value="auth_aes128">auth_aes128</option>																								  
 																		        </select>                                                                   
 																		    </div>                                                                          
 																		</div> 
@@ -361,7 +362,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4"){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

@@ -124,7 +124,7 @@ class UserController extends BaseController
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
         
-        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4')
+        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128')
 				{
 					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".Tools::base64_url_encode($ary['password'])."/?obfsparam=".Tools::base64_url_encode($user->obfs_param)."&remarks=".Tools::base64_url_encode($node->name);
 					$ssqr_s_n = "ssr://" . Tools::base64_url_encode($ssurl);				

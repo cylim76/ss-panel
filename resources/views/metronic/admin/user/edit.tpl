@@ -173,10 +173,11 @@
 													<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
 													<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
 													<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
-													<option value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
+													<option data-subtext="推荐" value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
 													<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
-													<option value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
-													<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>													
+													<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
+													<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
+													<option data-subtext="推荐" value="auth_aes128" {if $user->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>													
 												</select>
 											</div>
 										</div>
@@ -186,7 +187,7 @@
 
 
 											<div class="col-md-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $user->protocol != "auth_aes128"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -196,13 +197,13 @@
 
 											<div class="col-md-9">
 												<select class="bs-select form-control" id="obfs" onchange="disobfsparam();">
-													<option value="plain" {if $user->obfs=="plain"}selected="selected"{/if}>plain</option>
+													<option data-subtext="推荐" value="plain" {if $user->obfs=="plain"}selected="selected"{/if}>plain</option>
 													<option value="http_post" {if $user->obfs=="http_post"}selected="selected"{/if}>http_post</option>
 													<option value="http_post_compatible" {if $user->obfs=="http_post_compatible"}selected="selected"{/if}>http_post_compatible</option>
-													<option value="http_simple" {if $user->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
+													<option data-subtext="推荐" value="http_simple" {if $user->obfs=="http_simple"}selected="selected"{/if}>http_simple</option>
 													<option value="http_simple_compatible" {if $user->obfs=="http_simple_compatible"}selected="selected"{/if}>http_simple_compatible</option>
 													<option value="random_head" {if $user->obfs=="random_head"}selected="selected"{/if}>random_head</option>
-													<option value="tls1.2_ticket_auth" {if $user->obfs=="tls1.2_ticket_auth"}selected="selected"{/if}>tls1.2_ticket_auth</option>
+													<option data-subtext="推荐" value="tls1.2_ticket_auth" {if $user->obfs=="tls1.2_ticket_auth"}selected="selected"{/if}>tls1.2_ticket_auth</option>
 													<option value="tls1.2_ticket_auth_compatible" {if $user->obfs=="tls1.2_ticket_auth_compatible"}selected="selected"{/if}>tls1.2_ticket_auth_compatible</option>
 												</select>
 											</div>
@@ -223,7 +224,7 @@
 
 											<div class="col-md-9">
 												<select class="bs-select form-control" id="method">
-													<option value="aes-256-cfb" {if $user->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>
+													<option data-subtext="推荐" value="aes-256-cfb" {if $user->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>
                           <option value="aes-256-ctr" {if $user->method=="aes-256-ctr"}selected="selected"{/if}>aes-256-ctr</option>
                           <option value="camellia-256-cfb" {if $user->method=="camellia-256-cfb"}selected="selected"{/if}>camellia-256-cfb</option>
                           <option value="bf-cfb" {if $user->method=="bf-cfb"}selected="selected"{/if}>bf-cfb</option>
@@ -233,8 +234,8 @@
                           <option value="rc4-md5" {if $user->method=="rc4-md5"}selected="selected"{/if}>rc4-md5</option>
                           <option value="rc4-md5-6" {if $user->method=="rc4-md5-6"}selected="selected"{/if}>rc4-md5-6</option>
                           <option value="salsa20" {if $user->method=="salsa20"}selected="selected"{/if}>salsa20</option>
-                          <option value="chacha20" {if $user->method=="chacha20"}selected="selected"{/if}>chacha20</option>
-                          <option value="chacha20-ietf" {if $user->method=="chacha20-ietf"}selected="selected"{/if}>chacha20-ietf</option>
+                          <option data-subtext="推荐" value="chacha20" {if $user->method=="chacha20"}selected="selected"{/if}>chacha20</option>
+                          <option data-subtext="推荐" value="chacha20-ietf" {if $user->method=="chacha20-ietf"}selected="selected"{/if}>chacha20-ietf</option>
 												</select>
 											</div>
 										</div>
@@ -297,7 +298,7 @@
 														<input class="form-control" id="auto_reset_day" type="number" value="{$user->auto_reset_day}">
 														<div class="input-group-addon"> 日 </div>
 													</div>
-													<p class="help-block"> <code class="font-blue-sharp"> <small> 系统会在该日将已使用流量重置为0 </small></code></p>
+													<p class="help-block"> <code class="font-blue-sharp"> <small> 默认0为不重置流量，其他数字表示系统会在该日将已使用流量重置为0 </small></code></p>
 												</div>
 											</div>
 										</div>                     
@@ -421,7 +422,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4"){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true
