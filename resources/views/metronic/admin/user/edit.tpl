@@ -137,7 +137,7 @@
 
 												<div class="col-md-9">
 													<input class="form-control" id="node_group" type="number" value="{$user->node_group}">
-													<p class="help-block"><code class="font-blue-sharp"><small> 用户只能访问用户所属节点群组和节点群组为0的节点" </small></code></p>
+													<p class="help-block"><code class="font-blue-sharp"><small> 用户只能访问用户所属节点群组和节点群组为0的节点 </small></code></p>
 												</div>
 											</div>
 										</div>
