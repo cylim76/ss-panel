@@ -78,7 +78,11 @@
 														<option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
 														<option value="auth_sha1_v4">auth_sha1_v4</option>
 														<option value="auth_sha1_v4_compatible">auth_sha1_v4_compatible</option>
-														<option value="auth_aes128">auth_aes128</option>														
+														<option value="auth_aes128">auth_aes128</option>
+														<option value="auth_sha1_md5">auth_sha1_md5</option>
+														<option value="auth_sha1_md5_compatible">auth_sha1_md5_compatible</option>
+														<option value="auth_aes128_sha1">auth_aes128_sha1</option>
+														<option value="auth_aes128_sha1_compatible">auth_aes128_sha1_compatible</option>														
 													</select>
 												</div>
 											</div>
@@ -343,7 +347,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || $user->protocol=='auth_aes128'){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || $user->protocol=='auth_aes128' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

@@ -221,7 +221,11 @@
 													<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 													<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 													<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
-													<option data-subtext="推荐" value="auth_aes128" {if $user->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>													
+													<option data-subtext="推荐" value="auth_aes128" {if $user->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>
+													<option data-subtext="推荐" value="auth_aes128_md5" {if $user->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
+													<option value="auth_aes128_md5_compatible" {if $user->protocol=="auth_aes128_md5_compatible"}selected="selected"{/if}>auth_aes128_md5_compatible</option>
+													<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
+													<option value="auth_aes128_sha1_compatible" {if $user->protocol=="auth_aes128_sha1_compatible"}selected="selected"{/if}>auth_aes128_sha1_compatible</option>																																							
 												</select>
 											</div>
 										</div>
@@ -231,7 +235,7 @@
 
 
 											<div class="col-sm-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $user->protocol != "auth_aes128"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $user->protocol != "auth_aes128" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -408,7 +412,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128"){
+					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128" || protocol.value == "auth_aes128_md5" || protocol.value == "auth_aes128_sha1"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

@@ -76,7 +76,11 @@
 														<option value="auth_sha1_v2_compatible" {if $node->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 														<option value="auth_sha1_v4" {if $node->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 														<option value="auth_sha1_v4_compatible" {if $node->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
-														<option value="auth_aes128" {if $node->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>									
+														<option value="auth_aes128" {if $node->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>
+														<option value="auth_aes128_md5" {if $node->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
+														<option value="auth_aes128_md5_compatible" {if $node->protocol=="auth_aes128_md5_compatible"}selected="selected"{/if}>auth_aes128_md5_compatible</option>
+														<option value="auth_aes128_sha1" {if $node->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
+														<option value="auth_aes128_sha1_compatible" {if $node->protocol=="auth_aes128_sha1_compatible"}selected="selected"{/if}>auth_aes128_sha1_compatible</option>																																					
 													</select>
 												</div>
 											</div>
@@ -84,7 +88,7 @@
 												<label class="col-sm-3 control-label" for="protocol_param">默认协议参数</label>
 
 												<div class="col-sm-9">
-													<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"  && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128"} disabled="disabled"{/if}>
+													<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"  && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled"{/if}>
 												</div>
 											</div>
 
