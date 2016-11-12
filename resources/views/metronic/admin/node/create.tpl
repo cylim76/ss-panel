@@ -234,8 +234,8 @@
                        	        		
 																			<div class="col-md-9">
 																				<select class="bs-select form-control" id="status">
-																					<option value="可用">可用</option>
-																					<option value="不可用">不可用</option>
+																					<option value="1">可用</option>
+																					<option value="0">不可用</option>
 																				</select>
 																			</div>
 																		</div>
@@ -260,7 +260,7 @@
                        	        		
                        	        		
 																			<div class="col-md-9">
-																				<textarea class="form-control" id="note" rows="2"></textarea>
+																				<textarea class="form-control" id="note" rows="2" placeholder="节点备注仅管理员可见" ></textarea>
 																			</div>
 																		</div>
 																	</div>

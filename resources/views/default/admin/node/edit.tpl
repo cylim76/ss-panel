@@ -220,9 +220,9 @@
 
 													<div class="col-sm-9">
 														<select class="form-control" id="status">
-															<option value="可用" {if $node->status=="可用"}selected="selected"{/if}>可用</option>
+															<option value="1" {if $node->status==1}selected="selected"{/if}>可用</option>
 
-															<option value="不可用" {if $node->status=="不可用"}selected="selected"{/if}>不可用</option>
+															<option value="0" {if $node->status==0}selected="selected"{/if}>不可用</option>
 
 															</select>
 														</div>
@@ -248,7 +248,7 @@
 
 
 													<div class="col-sm-9">
-														<textarea class="form-control" id="note" rows="2">{$node->note}</textarea>
+														<textarea class="form-control" id="note" rows="2" placeholder="节点备注仅管理员可见" >{$node->note}</textarea>
 													</div>
 												</div>
 												</fieldset>

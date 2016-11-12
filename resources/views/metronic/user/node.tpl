@@ -61,11 +61,11 @@
                         <td><span class="badge bg-green-jungle">{$node->getTrafficFromLogs()}</span></td>
                         <td><span class="badge bg-green-jungle">{$node->getNodeLoad()}</span></td>
                         <td> <span
-                                                    	{if $node->status=='可用'} 
-                                                    	   class="badge bg-green-jungle" 
+                                                    	{if $node->status==1} 
+                                                    	   class="badge bg-green-jungle"> 可用 </span></a>   
                                                     	{else} 
-                                                    	   class="badge bg-red"  
-                                                    	{/if}> {$node->status}</span></td>
+                                                    	   class="badge bg-red" > 不可用 </span></a>   
+                                                    	{/if}
                         <td><a href="./node/{$node->id}" class="btn btn-outline btn-circle btn-sm purple"> 详细信息 </a></td>                            	
                     </tr>
                   {/foreach}

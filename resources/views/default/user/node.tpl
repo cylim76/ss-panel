@@ -37,11 +37,12 @@
                                     <div class="product-info">
                                         <a href="./node/{$node->id}" class="product-title">{$node->name} 
                                                     <span
-                                                    	{if $node->status=='可用'} 
-                                                    	   class="pull-right badge bg-green" 
+                                                    	{if $node->status==1} 
+                                                    	   class="pull-right badge bg-green" > 可用</span></a>   
+>
                                                     	{else} 
-                                                    	   class="pull-right badge bg-red"  
-                                                    	{/if}> {$node->status}</span></a>         
+                                                    	   class="pull-right badge bg-red" > 不可用</span></a>   
+                                                    	{/if}       
                                         <p>
                                             {$node->info}
                                         </p>
