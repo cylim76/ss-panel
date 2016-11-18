@@ -50,7 +50,7 @@ CREATE TABLE `ss_node` (
   `name` varchar(128) NOT NULL,
   `type` int(3) NOT NULL,
   `server` varchar(128) NOT NULL,
-  `method` varchar(64) NOT NULL DEFAULT 'rc4-md5',
+  `method` varchar(64) NOT NULL DEFAULT 'aes-256-cfb',
   `protocol` varchar(128) NOT NULL DEFAULT 'origin',
   `protocol_param` varchar(128) NULL DEFAULT NULL,
   `obfs` varchar(128) NOT NULL DEFAULT 'plain',

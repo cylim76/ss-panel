@@ -38,8 +38,7 @@
                                         <a href="./node/{$node->id}" class="product-title">{$node->name} 
                                                     <span
                                                     	{if $node->status==1} 
-                                                    	   class="pull-right badge bg-green" > 可用</span></a>   
->
+                                                    	   class="pull-right badge bg-green" > 可用</span></a>  
                                                     	{else} 
                                                     	   class="pull-right badge bg-red" > 不可用</span></a>   
                                                     	{/if}       

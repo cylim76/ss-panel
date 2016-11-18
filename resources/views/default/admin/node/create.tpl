@@ -192,7 +192,7 @@
 												<legend>描述信息</legend>
 												
 												<div class="form-group">
-													<label for="class" class="col-sm-3 control-label">节点类别</label>
+													<label for="class" class="col-sm-3 control-label">节点等级</label>
 
 
 													<div class="col-sm-9">

@@ -182,7 +182,7 @@
 												<legend>描述信息</legend>
 												
 												<div class="form-group">
-													<label for="class" class="col-sm-3 control-label"><p Title="用户只能访问用户等级大于等于节点类别的节点">节点类别</p></label>
+													<label for="class" class="col-sm-3 control-label"><p Title="用户只能访问用户等级大于等于节点类别的节点">节点等级</p></label>
 
 
 													<div class="col-sm-9">
