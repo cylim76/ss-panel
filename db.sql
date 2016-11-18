@@ -60,7 +60,7 @@ CREATE TABLE `ss_node` (
   `traffic_rate` float NOT NULL DEFAULT '1',
   `info` varchar(128) NOT NULL,
   `note` varchar(128) NOT NULL,
-  `status` varchar(128) NOT NULL,
+  `status` int(4) NOT NULL DEFAULT '1',
   `offset` int(11) NOT NULL DEFAULT '0',
   `sort` int(3) NOT NULL,
   PRIMARY KEY (`id`)
