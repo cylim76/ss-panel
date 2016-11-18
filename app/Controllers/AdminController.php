@@ -33,8 +33,18 @@ class AdminController extends UserController
     {
         $n = $request->getParam('num');
         $prefix = $request->getParam('prefix');
-	    	$uid = $request->getParam('uid');
-			
+      $uid = $request->getParam('uid');
+      
+      if($request->getParam('uid')!="0")
+      {
+       $user = User::where('id', $uid)->first();
+         if ($user != null) {
+             $res['ret'] = 0;
+             $res['msg'] = "邀请码类别中，指定的用户ID已存在！";
+             return $response->getBody()->write(json_encode($res));
+         }
+       }
+       
         if ($n < 1) {
             $res['ret'] = 0;
             return $response->getBody()->write(json_encode($res));

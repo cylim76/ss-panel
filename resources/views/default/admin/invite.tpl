@@ -20,6 +20,12 @@
 
                     <p id="msg-success-p"></p>
                 </div>
+                <div id="msg-error" class="alert alert-danger alert-dismissable" style="display:none">
+                    <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+
+                    <p id="msg-error-p"></p>
+                </div>                  
 
             </div>
         </div>
@@ -129,7 +135,10 @@
                         $("#msg-success-p").html(data.msg);
                         setTimeout("window.location.reload()",3000);
                         //window.setTimeout("location.href='/admin/invite'", 2000);
-                    }
+                    } else {
+												$("#msg-error").show();
+												$("#msg-error-p").html(data.msg);
+										}
                     // window.location.reload();
                 },
                 error: function (jqXHR) {

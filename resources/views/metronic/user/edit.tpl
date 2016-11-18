@@ -19,8 +19,7 @@
 			<div class="col-xs-12">
 				<div id="msg-error" class="alert alert-danger alert-dismissable" style="display:none">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-					<h4>
-					<i class="icon fa fa-warning"></i> 出错了!</h4>
+					<h4><i class="icon fa fa-warning"></i> 出错了!</h4>
 
 						<p id="msg-error-p"></p>
 					</div>

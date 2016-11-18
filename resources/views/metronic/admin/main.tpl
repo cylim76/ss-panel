@@ -63,7 +63,7 @@
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <img alt="User Image" class="img-circle" src="https://css.ddnsweb.com/metronic/global/img/userimage.png" />
-                                    <span class="username username-hide-on-mobile"> {$user->user_name} </span>
+                                    <span class="username username-hide-on-mobile">{if $user->isLogin}{$user->user_name}{/if} </span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">

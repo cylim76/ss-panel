@@ -161,6 +161,9 @@ class AuthController extends BaseController
 
         // do reg user
         $user = new User();
+        if ($c->user_id != 0){
+            $user->id = $c->user_id;
+        }
         $user->user_name = $name;
         $user->email = $email;
         $user->pass = Hash::passwordHash($passwd);
@@ -172,7 +175,11 @@ class AuthController extends BaseController
         $user->transfer_enable = Tools::toGB(Config::get('defaultTraffic'));
         $user->invite_num = Config::get('inviteNum');
         $user->reg_ip = Http::getClientIP();
-        $user->ref_by = $c->user_id;
+        if ($c->user_id != 0){
+            $user->ref_by = 0;
+        }else{
+            $user->ref_by = $c->user_id;
+        }
         $user->user_class = 0;
         $user->node_group = 0;
 
