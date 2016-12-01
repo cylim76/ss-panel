@@ -140,6 +140,15 @@
 													<p class="help-block"><code class="font-blue-sharp"><small> 用户只能访问用户所属节点群组和节点群组为0的节点 </small></code></p>
 												</div>
 											</div>
+											
+											<div class="form-group">
+												<label class="col-md-3 control-label bold"> 联系方式 </label>
+
+												<div class="col-md-9">
+													<textarea class="form-control" id="contact" rows="2">{$user->contact}</textarea>
+												</div>
+											</div>
+											
 										</div>
                  </div>
                  <div class="tab-pane" id="tab2">
@@ -378,6 +387,7 @@
 								custom_rss: $("#custom_rss").val(),
 								user_class: $("#user_class").val(),
 								node_group: $("#node_group").val(),
+								contact: $("#contact").val(),
 								enable: $("#enable").val(),
 								expire_at: $("#expire_at").val(),
 								is_admin: $("#is_admin").val(),

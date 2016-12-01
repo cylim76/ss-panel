@@ -63,6 +63,7 @@ class UserController extends AdminController
         $user->custom_rss = $request->getParam('custom_rss');
         $user->user_class = $request->getParam('user_class');
         $user->node_group = $request->getParam('node_group');
+        $user->contact = $request->getParam('contact');
         $user->enable = $request->getParam('enable');
         $user->expire_at = $request->getParam('expire_at');
         $user->is_admin = $request->getParam('is_admin');

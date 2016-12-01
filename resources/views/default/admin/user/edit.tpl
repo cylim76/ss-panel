@@ -114,7 +114,7 @@
 											  </div>
 										 </div>
 											
-											<div class="form-group">
+										<div class="form-group">
 											<label class="col-sm-3 control-label" for="node_group"><p Title="用户只能访问用户所属节点群组和节点群组为0的节点">用户群组</p></label>
 
 
@@ -122,7 +122,15 @@
 												<input class="form-control" id="node_group" type="number" value="{$user->node_group}">
 											</div>
 										</div>
-											
+										<div class="form-group">
+											<label for="info" class="col-md-3 control-label bold">联系方式</label>
+
+
+											<div class="col-md-9">
+												<textarea class="form-control" id="contact" rows="2">{$user->contact}</textarea>
+											</div>
+										</div>
+										
 										</div>
 
 										<div class="row">
@@ -364,6 +372,7 @@
 								custom_rss: $("#custom_rss").val(),
 								user_class: $("#user_class").val(),
 								node_group: $("#node_group").val(),
+								contact: $("#contact").val(),
 								enable: $("#enable").val(),
 								expire_at: $("#expire_at").val(),
 								is_admin: $("#is_admin").val(),
