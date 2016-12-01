@@ -132,6 +132,7 @@ CREATE TABLE `user` (
   `obfs_param` varchar(128) NULL DEFAULT NULL,
   `user_class` int(11) NOT NULL DEFAULT '0',
   `node_group` int(11) NOT NULL DEFAULT '0',
+  `contact` varchar(128) NOT NULL,
   `expire_at` date NOT NULL DEFAULT '2020-07-20', 
   `is_email_verify` tinyint(4) NOT NULL DEFAULT '0',
   `reg_ip` varchar(128) NOT NULL DEFAULT '127.0.0.1',
