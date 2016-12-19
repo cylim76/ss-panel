@@ -161,7 +161,7 @@ class AuthController extends BaseController
 
         // do reg user
         $user = new User();
-        if ($c->user_id != 0){
+        if ($c->user_id != 0 && $c->user_id != 1){
             $user->id = $c->user_id;
         }
         $user->user_name = $name;
