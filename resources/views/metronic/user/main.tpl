@@ -21,9 +21,9 @@
         <!--<link href="//cdn.bootcss.com/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />-->
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <!--<link href="//cdn.bootcss.com/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />-->
+        <link href="//cdn.bootcss.com/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
         <link href="/assets/metronic/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
-        <link href="//cdn.bootcss.com/datatables/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="//cdn.bootcss.com/datatables/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
         <!-- END PAGE LEVEL PLUGINS -->        
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="/assets/metronic/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
