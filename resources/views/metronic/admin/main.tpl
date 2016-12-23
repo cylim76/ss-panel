@@ -31,7 +31,7 @@
         <link href="/assets/metronic/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="/assets/metronic/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <!-- END THEME LAYOUT STYLES -->
-        <script async src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
         <link rel="shortcut icon" href="/favicon.ico" /> </head>
     <!-- END HEAD -->
 
@@ -62,7 +62,7 @@
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="User Image" class="img-circle" src="/assets/metronic/global/img/userimage.png" />
+                                    <!--<img alt="User Image" class="img-circle" src="/assets/metronic/global/img/userimage.png" />-->
                                     <span class="username username-hide-on-mobile">{if $user->isLogin}{$user->user_name}{/if} </span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
