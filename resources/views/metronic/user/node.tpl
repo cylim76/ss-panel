@@ -21,7 +21,7 @@
             <div class="alert alert-info alert-dismissable">
                 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
                   <strong class="font-red">注意!</strong>&nbsp;请勿在任何地方公开节点地址！谢谢配合！
-                  <p>流量比例为1即使用<code>1000MB</code>按照<code>1000MB</code>流量记录记录结算.</p>
+                  <p>流量比例为1即使用<code>1000MB</code>按照<code>1000MB</code>流量记录结算.</p>
             </div>
         </div>
 <!--<div class="col-md-12">-->
