@@ -139,7 +139,6 @@
 														<div class="input-group">
 															<select class="bs-select form-control" id="protocol" {if $user->custom_rss == 0} disabled="disabled" {/if}>
 																<option value="origin" {if $user->protocol=="origin"}selected="selected"{/if}>origin</option>
-																<option value="verify_simple" {if $user->protocol=="verify_simple"}selected="selected"{/if}>verify_simple</option>
 																<option value="verify_deflate" {if $user->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
 																<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
 																<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
