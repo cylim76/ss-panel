@@ -177,7 +177,6 @@
 											<div class="col-md-9">
 												<select class="bs-select form-control" id="protocol" onchange="disprotocolparam();">
 													<option value="origin" {if $user->protocol=="origin"}selected="selected"{/if}>origin</option>
-													<option value="verify_simple" {if $user->protocol=="verify_simple"}selected="selected"{/if}>verify_simple</option>
 													<option value="verify_deflate" {if $user->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
 													<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
 													<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
@@ -186,11 +185,8 @@
 													<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 													<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 													<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
-													<option data-subtext="推荐" value="auth_aes128" {if $user->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>
 													<option data-subtext="推荐" value="auth_aes128_md5" {if $user->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
-													<option value="auth_aes128_md5_compatible" {if $user->protocol=="auth_aes128_md5_compatible"}selected="selected"{/if}>auth_aes128_md5_compatible</option>
-													<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
-													<option value="auth_aes128_sha1_compatible" {if $user->protocol=="auth_aes128_sha1_compatible"}selected="selected"{/if}>auth_aes128_sha1_compatible</option>																										
+													<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>																								
 												</select>
 											</div>
 										</div>
@@ -200,7 +196,7 @@
 
 
 											<div class="col-md-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $user->protocol != "auth_aes128" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -222,14 +218,14 @@
 											</div>
 										</div>
 
-<!--										<div class="form-group">
+										<div class="form-group">
 											<label class="col-md-3 control-label bold" for="obfs_param">混淆参数</label>
 
 
 											<div class="col-md-9">
-												<input class="form-control" id="obfs_param" type="text" value="{$user->obfs_param}" {if $user->obfs != "http_simple" && $user->obfs != "http_post" && $user->obfs != "tls1.2_ticket_auth"} disabled="disabled"{/if}>
+												<input class="form-control" id="obfs_param" type="text" value="{$user->obfs_param}" {if $user->obfs != "http_simple" && $user->obfs != "http_post"} disabled="disabled"{/if}>
 											</div>
-										</div>-->
+										</div>
 
 										<div class="form-group">
 											<label for="method" class="col-md-3 control-label bold"> 加密方式</label>
@@ -436,7 +432,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128" || protocol.value == "auth_aes128_md5" || protocol.value == "auth_aes128_sha1"){
+					if (protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128_md5" || protocol.value == "auth_aes128_sha1"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true
@@ -448,7 +444,7 @@
 				function disobfsparam()
 				{
 					var protocol = document.getElementById("obfs");
-					if (obfs.value == "http_simple" || obfs.value == "http_post" || obfs.value == "tls1.2_ticket_auth"){
+					if (obfs.value == "http_simple" || obfs.value == "http_post"){
 						document.getElementById("obfs_param").disabled=false
 					} else {
 						document.getElementById("obfs_param").disabled=true

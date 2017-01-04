@@ -159,11 +159,8 @@
 																<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 																<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 																<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
-																<option data-subtext="推荐" value="auth_aes128" {if $user->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>
 																<option data-subtext="推荐" value="auth_aes128_md5" {if $user->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
-																<option value="auth_aes128_md5_compatible" {if $user->protocol=="auth_aes128_md5_compatible"}selected="selected"{/if}>auth_aes128_md5_compatible</option>
-																<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
-																<option value="auth_aes128_sha1_compatible" {if $user->protocol=="auth_aes128_sha1_compatible"}selected="selected"{/if}>auth_aes128_sha1_compatible</option>																																
+																<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>																														
 															</select>
 															<div class="input-group-btn">
 																<button type="submit" id="protocol-update" class="btn btn-primary" {if $user->custom_rss == 0} disabled="disabled" {/if}>修改</button>

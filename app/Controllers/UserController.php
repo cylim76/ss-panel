@@ -118,13 +118,13 @@ class UserController extends BaseController
         }*/
         $ary['protocol'] = $this->user->protocol;
         $ary['obfs'] = $this->user->obfs;
-        /*if ($this->user->obfs=='http_post'||$this->user->obfs=='http_simple'||$this->user->obfs=='tls1.2_ticket_auth') {
+        if ($this->user->obfs=='http_post'||$this->user->obfs=='http_simple') {
         $ary['obfs_param'] = $this->user->obfs_param;
-        }	*/
+        }	
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
         
-        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_simple' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1')
+        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='verify_sha1' || $user->protocol=='auth_sha1' || $user->protocol=='auth_sha1_v2' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1')
 				{
 					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".Tools::base64_url_encode($ary['password'])."/?obfsparam=".Tools::base64_url_encode($user->obfs_param)."&remarks=".Tools::base64_url_encode($node->name);
 					$ssqr_s_n = "ssr://" . Tools::base64_url_encode($ssurl);				
