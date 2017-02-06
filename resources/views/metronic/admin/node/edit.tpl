@@ -145,13 +145,16 @@
 
 						<div class="col-md-9">
 							<select class="bs-select form-control" id="method"  disabled="disabled">
+								<option value="aes-128-cfb" {if $node->method=="aes-128-cfb"}selected="selected"{/if}>aes-128-cfb</option>
+								<option value="aes-192-cfb" {if $node->method=="aes-192-cfb"}selected="selected"{/if}>aes-192-cfb</option>																
 								<option value="aes-256-cfb" {if $node->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>
-								<option value="aes-256-ctr" {if $node->method=="aes-256-ctr"}selected="selected"{/if}>aes-256-ctr</option>
-								<option value="camellia-256-cfb" {if $node->method=="camellia-256-cfb"}selected="selected"{/if}>camellia-256-cfb</option>
+								<option value="aes-128-ctr" {if $node->method=="aes-128-ctr"}selected="selected"{/if}>aes-128-ctr</option>
+								<option value="aes-192-ctr" {if $node->method=="aes-192-ctr"}selected="selected"{/if}>aes-192-ctr</option>																
+								<option value="aes-256-ctr" {if $node->method=="aes-256-ctr"}selected="selected"{/if}>aes-256-ctr</option>																
 								<option value="bf-cfb" {if $node->method=="bf-cfb"}selected="selected"{/if}>bf-cfb</option>
-								<option value="cast5-cfb" {if $node->method=="cast5-cfb"}selected="selected"{/if}>cast5-cfb</option>
-								<option value="des-cfb" {if $node->method=="des-cfb"}selected="selected"{/if}>des-cfb</option>
-								<option value="des-ede3-cfb" {if $node->method=="des-ede3-cfb"}selected="selected"{/if}>des-ede3-cfb</option>
+								<option value="camellia-128-cfb" {if $node->method=="camellia-128-cfb"}selected="selected"{/if}>camellia-128-cfb</option>
+								<option value="camellia-192-cfb" {if $node->method=="camellia-192-cfb"}selected="selected"{/if}>camellia-192-cfb</option>
+								<option value="camellia-256-cfb" {if $node->method=="camellia-256-cfb"}selected="selected"{/if}>camellia-256-cfb</option>
 								<option value="rc4-md5" {if $node->method=="rc4-md5"}selected="selected"{/if}>rc4-md5</option>
 								<option value="rc4-md5-6" {if $node->method=="rc4-md5-6"}selected="selected"{/if}>rc4-md5-6</option>
 								<option value="salsa20" {if $node->method=="salsa20"}selected="selected"{/if}>salsa20</option>
