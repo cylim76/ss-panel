@@ -30,7 +30,7 @@
 				<script defer src="//cdn.bootcss.com/mistic100-Bootstrap-Confirmation/2.2.0/bootstrap-confirmation.min.js"></script>
 				<script defer src="//cdn.bootcss.com/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 				<script defer src="/assets/metronic/global/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>
-				<script defer src="/assets/metronic/global/scripts/datatable.js"></script>
+				<!-- <script defer src="/assets/metronic/global/scripts/datatable.js"></script> -->
 				<script src="/assets/metronic/global/plugins/datatables/datatables.min.js"></script>
 				<script src="/assets/metronic/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"></script>				
 				<!-- END PAGE LEVEL PLUGINS -->	 
