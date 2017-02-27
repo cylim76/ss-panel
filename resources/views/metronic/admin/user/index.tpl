@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="responsiveone">
                             <thead>
                                 <tr class="">
                                     <th style="width:40px !important">ID</th>

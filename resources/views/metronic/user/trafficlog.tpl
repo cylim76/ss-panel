@@ -29,7 +29,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="table-scrollable">
-                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="responsiveone">
                         	<thead>
                             <tr>
                                 <th scope="col" style="width:70px !important">ID</th>

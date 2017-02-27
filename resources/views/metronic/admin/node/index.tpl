@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <p> <a class="btn blue btn-priamry" href="/admin/node/create"><i class="fa fa-plus"></i>添加</a> </p>
-                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="responsiveone">
                             <thead>
                                 <tr>
                                     <th scope="col" style="width:70px !important">ID</th>

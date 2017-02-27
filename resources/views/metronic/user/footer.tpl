@@ -36,7 +36,7 @@
 				<!-- END PAGE LEVEL PLUGINS -->	 
 				<!-- BEGIN PAGE LEVEL SCRIPTS -->
 				<script defer src="/assets/metronic/pages/scripts/components-bootstrap-select.min.js"></script>
-				<script defer src="/assets/metronic/pages/scripts/table-datatables-responsive.min.js"></script>
+				<script defer src="/assets/metronic/pages/scripts/table-datatables-responsive.js"></script>
 				<!-- END PAGE LEVEL SCRIPTS -->						 
 				<!-- BEGIN THEME LAYOUT SCRIPTS -->
 				<script defer src="/assets/metronic/layouts/layout/scripts/layout.min.js"></script>
