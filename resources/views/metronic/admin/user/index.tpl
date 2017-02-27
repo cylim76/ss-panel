@@ -68,8 +68,10 @@
                                     </td>
                                 </tr>
                                 {/foreach}
-                            </tbody>        	 
+                            </tbody>
+						{$users->render()}
                         </table>
+						{$users->render()}
                 </div><!-- /.box -->
             </div>
         </div>

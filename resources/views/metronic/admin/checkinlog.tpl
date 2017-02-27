@@ -40,7 +40,9 @@
                                 </tr>
                             	{/foreach}
                             </tbody>
+							{$logs->render()}
                         </table>
+						{$logs->render()}
                 </div><!-- /.box -->
             </div>
         </div>

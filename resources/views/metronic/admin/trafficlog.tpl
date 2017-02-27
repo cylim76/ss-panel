@@ -54,7 +54,9 @@
                                 </tr>
                             	{/foreach}
                             </tbody>
+							{$logs->render()}
                         </table>
+						{$logs->render()}
             </div>
         </div>
 

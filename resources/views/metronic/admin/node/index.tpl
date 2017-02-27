@@ -64,8 +64,10 @@
                 										</td>
                                 </tr>
                             	{/foreach}
-                            </tbody>                           
+                            </tbody>
+							{$nodes->render()}
                         </table>
+						{$nodes->render()}
             </div>
         </div>
 
