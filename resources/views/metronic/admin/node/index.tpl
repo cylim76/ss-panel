@@ -23,7 +23,6 @@
         <div class="row">
             <div class="col-xs-12">
                 <p> <a class="btn blue btn-priamry" href="/admin/node/create"><i class="fa fa-plus"></i>添加</a> </p>
-                    <div class="table-scrollable">
                         <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                             <thead>
                                 <tr>
@@ -67,7 +66,6 @@
                             	{/foreach}
                             </tbody>                           
                         </table>
-                    </div>
             </div>
         </div>
 

@@ -61,6 +61,5 @@
 
     </div><!-- /.content -->
 </div><!-- /.content-wrapper -->
-<script defer src="/assets/metronic/pages/scripts/table-datatables-fixedheader.min.js"></script>
 
 {include file='user/footer.tpl'}

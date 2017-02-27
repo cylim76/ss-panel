@@ -27,7 +27,6 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                    <div class="table-scrollable">
                         <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                         	<thead>
                             <tr>
@@ -56,7 +55,6 @@
                             	{/foreach}
                             </tbody>
                         </table>
-                    </div>
             </div>
         </div>
 
