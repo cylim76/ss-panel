@@ -24,7 +24,7 @@
             <div class="col-xs-12">
                 <p> <a class="btn blue btn-priamry" href="/admin/node/create"><i class="fa fa-plus"></i>添加</a> </p>
                     <div class="table-scrollable">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                             <thead>
                                 <tr>
                                     <th scope="col" style="width:70px !important">ID</th>
@@ -42,9 +42,9 @@
                 										<th scope="col">排序</th>
                 										<th scope="col">操作</th>
                                 </tr>
-                            </thead>
-                            {foreach $nodes as $node}
+                            </thead>                          
                             <tbody>
+                            	{foreach $nodes as $node}
                                 <tr>
                                     <td>{$node->id}</td>
                 										<td>{$node->name}</td>
@@ -64,8 +64,8 @@
                 										    <a class="btn btn-outline btn-circle red btn-sm black" data-toggle="confirmation" data-popout="true" data-original-title="" title="确认删除?" id="delete_node" value="{$node->id}" href="/admin/node/{$node->id}/delete"><i class="fa fa-trash-o"></i>删除</a>
                 										</td>
                                 </tr>
-                            </tbody>
-                            {/foreach}
+                            	{/foreach}
+                            </tbody>                           
                         </table>
                     </div>
             </div>

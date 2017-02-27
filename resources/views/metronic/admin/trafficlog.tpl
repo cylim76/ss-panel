@@ -29,7 +29,7 @@
             <div class="col-xs-12">
                     <div class="table-scrollable">
                         {$logs->render()}
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                         	<thead>
                             <tr>
                                 <th scope="col" style="width:70px !important">ID</th>
@@ -41,9 +41,9 @@
                                 <th scope="col">结算流量</th>
                                 <th scope="col">记录时间</th>
                             </tr>
-                            </thead>                            
-                            {foreach $logs as $log}
+                            </thead>
                             <tbody>
+                            	{foreach $logs as $log}
                                 <tr>
                                     <td>#{$log->id}</td>
                                     <td>{$log->user_id}</td>
@@ -54,8 +54,8 @@
                                     <td>{$log->traffic}</td>
                                     <td>{$log->logTime()}</td>
                                 </tr>
-                            </tbody>                                
-                            {/foreach}
+                            	{/foreach}
+                            </tbody>
                         </table>
                         {$logs->render()}
                     </div>

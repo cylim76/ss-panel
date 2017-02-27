@@ -30,7 +30,7 @@
                 <div class="box">
                     <div class="table-scrollable">
                         {$logs->render()}
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                         	<thead>
                             <tr>
                                 <th scope="col" style="width:70px !important">ID</th>
@@ -41,8 +41,9 @@
                                 <th scope="col">记录时间</th>
                             </tr>
                             </thead>                            
-                            {foreach $logs as $log}
+                            
                             <tbody>
+                            	{foreach $logs as $log}
                                 <tr>
                                     <td>#{$log->id}</td>
                                     <td>{$log->node()->name}</td>
@@ -51,8 +52,8 @@
                                     <td>{$log->traffic}</td>
                                     <td>{$log->logTime()}</td>
                                 </tr>
-                            </tbody>                                
-                            {/foreach}
+                               {/foreach}
+                            </tbody>
                         </table>
                         {$logs->render()}
                     </div><!-- /.box-body -->
@@ -62,5 +63,6 @@
 
     </div><!-- /.content -->
 </div><!-- /.content-wrapper -->
+<script defer src="/assets/metronic/pages/scripts/table-datatables-fixedheader.min.js"></script>
 
 {include file='user/footer.tpl'}
