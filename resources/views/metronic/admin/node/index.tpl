@@ -23,22 +23,22 @@
         <div class="row">
             <div class="col-xs-12">
                 <p> <a class="btn blue btn-priamry" href="/admin/node/create"><i class="fa fa-plus"></i>添加</a> </p>
-                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
                             <thead>
                                 <tr>
                                     <th scope="col" style="width:70px !important">ID</th>
-                										<th scope="col">节点</th>
-                										<th scope="col">节点地址</th>
-                										<th scope="col">节点群组</th>
-                										<th scope="col">节点等级</th>
-                										<th scope="col">默认加密</th>
-                										<th scope="col">流量比例</th>
-                										<th scope="col">是否显示</th>
-                										<th scope="col">节点状态</th>
-                										<th scope="col">在线人数</th>
-                										<th scope="col">描述</th>
-                										<th scope="col">备注</th>
-                										<th scope="col">排序</th>
+                										<th scope="col"><strong>节点</strong></th>
+                										<th scope="col"><strong>节点地址</strong></th>
+                										<th scope="col"><strong>节点群组</strong></th>
+                										<th scope="col"><strong>节点等级</strong></th>
+                										<th scope="col"><strong>默认加密</strong></th>
+                										<th scope="col"><strong>流量比例</strong></th>
+                										<th scope="col"><strong>是否显示</strong></th>
+                										<th scope="col"><strong>节点状态</strong></th>
+                										<th scope="col"><strong>在线人数</strong></th>
+                										<th scope="col"><strong>描述</strong></th>
+                										<th scope="col"><strong>备注</strong></th>
+                										<th scope="col"><strong>排序</strong></th>
                 										<th scope="col">操作</th>
                                 </tr>
                             </thead>                          
@@ -65,9 +65,7 @@
                                 </tr>
                             	{/foreach}
                             </tbody>
-							{$nodes->render()}
                         </table>
-						{$nodes->render()}
             </div>
         </div>
 

@@ -29,15 +29,15 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="table-scrollable">
-                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
                         	<thead>
                             <tr>
                                 <th scope="col" style="width:70px !important">ID</th>
-                                <th scope="col">使用节点</th>
-                                <th scope="col">倍率</th>
-                                <th scope="col">实际使用流量</th>
-                                <th scope="col">结算流量</th>
-                                <th scope="col">记录时间</th>
+                                <th scope="col"><strong>使用节点</strong></th>
+                                <th scope="col"><strong>倍率</strong></th>
+                                <th scope="col"><strong>实际使用流量</strong></th>
+                                <th scope="col"><strong>结算流量</strong></th>
+                                <th scope="col"><strong>记录时间</strong></th>
                             </tr>
                             </thead>                            
                             

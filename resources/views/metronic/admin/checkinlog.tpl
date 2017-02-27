@@ -19,14 +19,14 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
                         	<thead>
                             <tr>
-                                <th scope="col style="width:70px !important"">序号</th>
-                                <th scope="col">用户ID</th>
-                                <th scope="col">用户昵称</th>
-                                <th scope="col">获得流量</th>
-                                <th scope="col">签到时间</th>
+                                <th scope="col style="width:70px !important""><strong>序号</strong></th>
+                                <th scope="col"><strong>用户ID</strong></th>
+                                <th scope="col"><strong>用户昵称</strong></th>
+                                <th scope="col"><strong>获得流量</strong></th>
+                                <th scope="col"><strong>签到时间</strong></th>
                             </tr>
                             </thead>                                                     
                             <tbody>

@@ -36,15 +36,15 @@
             <table class="table table-striped table-bordered table-hover dt-responsive" width="50%" id="sample_1" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th class="all">节点名称</th>
-                        <th class="none">节点地址</th>                        
-                        <th class="none">连接端口</th>
-                        <th class="none">加密方式</th>
-                        <th class="none">Uptime</th>
-                        <th class="min-tablet">在线人数</th>                                               
-                        <th class="min-tablet"> 产生流量 </th>                       
-                        <th class="min-tablet"> 负载 </th>
-                        <th class="nodestatus">节点状态</th>
+                        <th class="all"><strong>节点名称</strong></th>
+                        <th class="none"><strong>节点地址</strong></th>                        
+                        <th class="none"><strong>连接端口</strong></th>
+                        <th class="none"><strong>加密方式</strong></th>
+                        <th class="none"><strong>Uptime</strong></th>
+                        <th class="min-tablet"><strong>在线人数</strong></th>                                               
+                        <th class="min-tablet"><strong> 产生流量 </strong></th>                       
+                        <th class="min-tablet"><strong> 负载 </strong></th>
+                        <th class="nodestatus"><strong>节点状态</strong></th>
                         <th class="none"></th>
                     </tr>
                 </thead>                

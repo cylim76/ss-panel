@@ -19,23 +19,23 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                        <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_1">
                             <thead>
                                 <tr class="">
                                     <th style="width:40px !important">ID</th>
-                                    <th>昵称</th>
-                                    <th>邮箱</th>
-                                    <th>端口</th>
-                                    <th>状态</th>
-                                    <!--<th>协议</th>-->
-                                    <!--<th>混淆</th>-->
-                                    <th>加密</th>
-                                    <th>已用流量/总流量</th>
-                                    <th>最后在线时间</th>
-                                    <!--<th>最后签到时间</th>-->
-                                    <th>注册时间</th>
-                                    <th>到期时间</th>
-                                    <th>注册IP</th>
+                                    <th><strong>昵称</strong></th>
+                                    <th><strong>邮箱</strong></th>
+                                    <th><strong>端口</strong></th>
+                                    <th><strong>状态</strong></th>
+                                    <!--<th><strong>协议</strong></th>-->
+                                    <!--<th><strong>混淆</strong></th>-->
+                                    <th><strong>加密</strong></th>
+                                    <th><strong>已用流量/总流量</strong></th>
+                                    <th><strong>最后在线时间</strong></th>
+                                    <!--<th><strong>最后签到时间</strong></th>-->
+                                    <th><strong>注册时间</strong></th>
+                                    <th><strong>到期时间</strong></th>
+                                    <th><strong>注册IP</strong></th>
                                     <th>操作</th>
                                 </tr>
                             </thead>        
