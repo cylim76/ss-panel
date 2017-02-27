@@ -20,7 +20,6 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="table-scrollable">
-                        {$logs->render()}
                         <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                         	<thead>
                             <tr>
@@ -43,7 +42,6 @@
                             	{/foreach}
                             </tbody>
                         </table>
-                        {$logs->render()}
                     </div><!-- /.box-body -->
                 </div><!-- /.box -->
             </div>

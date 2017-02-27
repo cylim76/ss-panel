@@ -27,6 +27,10 @@
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script defer src="/assets/metronic/global/scripts/app.min.js"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="/assets/metronic/global/plugins/datatables/datatables.min.js"></script>
+        <script src="/assets/metronic/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script defer src="//cdn.bootcss.com/mistic100-Bootstrap-Confirmation/2.2.0/bootstrap-confirmation.min.js"></script>
         <script defer src="//cdn.bootcss.com/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
