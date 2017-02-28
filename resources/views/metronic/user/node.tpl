@@ -33,7 +33,7 @@
             <div class="tools"> </div>
         </div>
         <div class="portlet-body">
-            <table class="table table-striped table-bordered table-hover dt-responsive" width="50%" id="responsiveone" cellspacing="0" width="100%">
+            <table class="table table-striped table-bordered table-hover dt-responsive" id="responsiveone">
                 <thead>
                     <tr>
                         <th class="all"><strong>节点名称</strong></th>
