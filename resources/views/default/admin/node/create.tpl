@@ -69,20 +69,12 @@
 												<div class="col-sm-9">
 													<select class="form-control" id="protocol" onchange="disprotocolparam();" disabled="disabled">
 														<option value="origin" selected="selected">origin</option>
-														<option value="verify_simple">verify_simple</option>
 														<option value="verify_deflate">verify_deflate</option>
-														<option value="verify_sha1">verify_sha1</option>
-														<option value="auth_sha1">auth_sha1</option>
-														<option value="auth_sha1_compatible">auth_sha1_compatible</option>
-														<option value="auth_sha1_v2">auth_sha1_v2</option>
-														<option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
 														<option value="auth_sha1_v4">auth_sha1_v4</option>
 														<option value="auth_sha1_v4_compatible">auth_sha1_v4_compatible</option>
-														<option value="auth_aes128">auth_aes128</option>
-														<option value="auth_sha1_md5">auth_sha1_md5</option>
-														<option value="auth_sha1_md5_compatible">auth_sha1_md5_compatible</option>
+														<option value="auth_aes128_md5">auth_aes128_md5</option>
 														<option value="auth_aes128_sha1">auth_aes128_sha1</option>
-														<option value="auth_aes128_sha1_compatible">auth_aes128_sha1_compatible</option>														
+														<option value="auth_chain_a">auth_chain_a</option>														
 													</select>
 												</div>
 											</div>
@@ -126,6 +118,8 @@
 
 												<div class="col-sm-9">
 													<select class="form-control" id="method" disabled="disabled">
+														<option value="none">none</option>
+														<option value="table">table</option>
 														<option value="aes-128-cfb">aes-128-cfb</option>
 														<option value="aes-192-cfb">aes-192-cfb</option>																
 														<option value="aes-256-cfb" selected="selected">aes-256-cfb</option>
@@ -349,7 +343,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_simple" || protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || $user->protocol=='auth_aes128' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'){
+					if (protocol.value == "auth_chain_a" || protocol.value == "auth_sha1_v4"  || $protocol->protocol=='auth_aes128_md5' || $protocol->protocol=='auth_aes128_sha1'){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

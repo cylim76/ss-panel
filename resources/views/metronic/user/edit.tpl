@@ -140,15 +140,11 @@
 															<select class="bs-select form-control" id="protocol" {if $user->custom_rss == 0} disabled="disabled" {/if}>
 																<option value="origin" {if $user->protocol=="origin"}selected="selected"{/if}>origin</option>
 																<option value="verify_deflate" {if $user->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
-																<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
-																<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
-																<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
-																<option data-subtext="推荐" value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
-																<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 																<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 																<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
 																<option data-subtext="推荐" value="auth_aes128_md5" {if $user->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
-																<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>															
+																<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
+																<option data-subtext="推荐" value="auth_chain_a" {if $user->protocol=="auth_chain_a"}selected="selected"{/if}>auth_chain_a</option>																
 															</select>
 															<div class="input-group-btn">
 																<button type="submit" id="protocol-update" class="btn green btn-outline" {if $user->custom_rss == 0} disabled="disabled" {/if}>修改</button>
@@ -191,6 +187,8 @@
 													<div class="col-md-9">
 														<div class="input-group">
 															<select class="bs-select form-control" id="method" {if $user->custom_method == 0} disabled="disabled"{/if}>
+																<option value="none" {if $user->method=="none"}selected="selected"{/if}>none</option>
+																<option value="table" {if $user->method=="table"}selected="selected"{/if}>table</option>
 																<option value="aes-128-cfb" {if $user->method=="aes-128-cfb"}selected="selected"{/if}>aes-128-cfb</option>
 																<option value="aes-192-cfb" {if $user->method=="aes-192-cfb"}selected="selected"{/if}>aes-192-cfb</option>																
 																<option data-subtext="推荐" value="aes-256-cfb" {if $user->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>

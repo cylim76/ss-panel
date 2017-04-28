@@ -221,15 +221,11 @@
 												<select class="form-control" id="protocol" onchange="disprotocolparam();">
 													<option value="origin" {if $user->protocol=="origin"}selected="selected"{/if}>origin</option>
 													<option value="verify_deflate" {if $user->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
-													<option value="verify_sha1" {if $user->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
-													<option value="auth_sha1" {if $user->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
-													<option value="auth_sha1_compatible" {if $user->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
-													<option data-subtext="推荐" value="auth_sha1_v2" {if $user->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
-													<option value="auth_sha1_v2_compatible" {if $user->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 													<option data-subtext="推荐" value="auth_sha1_v4" {if $user->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 													<option value="auth_sha1_v4_compatible" {if $user->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
 													<option data-subtext="推荐" value="auth_aes128_md5" {if $user->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
-													<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>																																						
+													<option data-subtext="推荐" value="auth_aes128_sha1" {if $user->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
+													<option data-subtext="推荐" value="auth_chain_a" {if $user->protocol=="auth_chain_a"}selected="selected"{/if}>auth_chain_a</option>																																						
 												</select>
 											</div>
 										</div>
@@ -239,7 +235,7 @@
 
 
 											<div class="col-sm-9">
-												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_sha1" && $user->protocol != "auth_sha1_v2"  && $user->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled" {/if}>
+												<input class="form-control" id="protocol_param" type="text" value="{$user->protocol_param}" {if $user->protocol != "auth_chain_a" && $user->protocol != "auth_sha1_v4" && $user->protocol != "auth_aes128_md5" && $user->protocol != "auth_aes128_sha1"} disabled="disabled" {/if}>
 											</div>
 										</div>
 
@@ -276,6 +272,8 @@
 
 											<div class="col-sm-9">
 												<select class="form-control" id="method">
+													<option value="none" {if $user->method=="none"}selected="selected"{/if}>none</option>
+													<option value="table" {if $user->method=="table"}selected="selected"{/if}>table</option>
 													<option value="aes-128-cfb" {if $user->method=="aes-128-cfb"}selected="selected"{/if}>aes-128-cfb</option>
 													<option value="aes-192-cfb" {if $user->method=="aes-192-cfb"}selected="selected"{/if}>aes-192-cfb</option>																
 													<option data-subtext="推荐" value="aes-256-cfb" {if $user->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>
@@ -420,7 +418,7 @@
 				function disprotocolparam()
 				{
 					var protocol = document.getElementById("protocol");
-					if (protocol.value == "auth_sha1" || protocol.value == "auth_sha1_v2" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128_md5" || protocol.value == "auth_aes128_sha1"){
+					if (protocol.value == "auth_chain_a" || protocol.value == "auth_sha1_v4" || protocol.value == "auth_aes128_md5" || protocol.value == "auth_aes128_sha1"){
 						document.getElementById("protocol_param").disabled=false
 					} else {
 						document.getElementById("protocol_param").disabled=true

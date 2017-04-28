@@ -67,20 +67,12 @@
 												<div class="col-sm-9">
 													<select class="form-control" id="protocol" onchange="disprotocolparam();" disabled="disabled">
 														<option value="origin" {if $node->protocol=="origin"}selected="selected"{/if}>origin</option>
-														<option value="verify_simple" {if $node->protocol=="verify_simple"}selected="selected"{/if}>verify_simple</option>
 														<option value="verify_deflate" {if $node->protocol=="verify_deflate"}selected="selected"{/if}>verify_deflate</option>
-														<option value="verify_sha1" {if $node->protocol=="verify_sha1"}selected="selected"{/if}>verify_sha1</option>
-														<option value="auth_sha1" {if $node->protocol=="auth_sha1"}selected="selected"{/if}>auth_sha1</option>
-														<option value="auth_sha1_compatible" {if $node->protocol=="auth_sha1_compatible"}selected="selected"{/if}>auth_sha1_compatible</option>
-														<option value="auth_sha1_v2" {if $node->protocol=="auth_sha1_v2"}selected="selected"{/if}>auth_sha1_v2</option>
-														<option value="auth_sha1_v2_compatible" {if $node->protocol=="auth_sha1_v2_compatible"}selected="selected"{/if}>auth_sha1_v2_compatible</option>
 														<option value="auth_sha1_v4" {if $node->protocol=="auth_sha1_v4"}selected="selected"{/if}>auth_sha1_v4</option>
 														<option value="auth_sha1_v4_compatible" {if $node->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
-														<option value="auth_aes128" {if $node->protocol=="auth_aes128"}selected="selected"{/if}>auth_aes128</option>
 														<option value="auth_aes128_md5" {if $node->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
-														<option value="auth_aes128_md5_compatible" {if $node->protocol=="auth_aes128_md5_compatible"}selected="selected"{/if}>auth_aes128_md5_compatible</option>
 														<option value="auth_aes128_sha1" {if $node->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
-														<option value="auth_aes128_sha1_compatible" {if $node->protocol=="auth_aes128_sha1_compatible"}selected="selected"{/if}>auth_aes128_sha1_compatible</option>																																					
+														<option value="auth_chain_a" {if $node->protocol=="auth_chain_a"}selected="selected"{/if}>auth_chain_a</option>																																						
 													</select>
 												</div>
 											</div>
@@ -88,7 +80,7 @@
 												<label class="col-sm-3 control-label" for="protocol_param">默认协议参数</label>
 
 												<div class="col-sm-9">
-													<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_sha1" && $node->protocol != "auth_sha1_v2"  && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled"{/if}>
+													<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_chain_a" && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled"{/if}>
 												</div>
 											</div>
 
@@ -123,6 +115,8 @@
 
 												<div class="col-sm-9">
 													<select class="form-control" id="method"  disabled="disabled">
+														<option value="none" {if $node->method=="none"}selected="selected"{/if}>none</option>
+														<option value="table" {if $node->method=="table"}selected="selected"{/if}>table</option>
 														<option value="aes-128-cfb" {if $node->method=="aes-128-cfb"}selected="selected"{/if}>aes-128-cfb</option>
 														<option value="aes-192-cfb" {if $node->method=="aes-192-cfb"}selected="selected"{/if}>aes-192-cfb</option>																
 														<option value="aes-256-cfb" {if $node->method=="aes-256-cfb"}selected="selected"{/if}>aes-256-cfb</option>
