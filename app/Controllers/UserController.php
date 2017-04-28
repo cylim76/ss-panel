@@ -179,7 +179,7 @@ class UserController extends BaseController
             $char = Tools::genRandomChar(32);
             $code = new InviteCode();
             $code->code = $char;
-            $code->user_id = $this->user->id;
+            $code->user_id = 1;
             $code->save();
         }
         $this->user->invite_num = 0;
