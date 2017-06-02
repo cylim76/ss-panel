@@ -272,7 +272,7 @@
 
 											<div class="col-sm-9">
 												<select class="form-control" id="method">
-													<option value="none" {if $user->method=="none"}selected="selected"{/if}>none</option>
+													<option value="none" {if $user->protocol !="auth_chain_a"} data-subtext="必须先修改协议插件为:auth_chain_a,方可选择none" disabled="disabled"{/if} {if $user->method=="none"}selected="selected"{/if}>none</option>
 													<option value="table" {if $user->method=="table"}selected="selected"{/if}>table</option>
 													<option value="aes-128-cfb" {if $user->method=="aes-128-cfb"}selected="selected"{/if}>aes-128-cfb</option>
 													<option value="aes-192-cfb" {if $user->method=="aes-192-cfb"}selected="selected"{/if}>aes-192-cfb</option>																
