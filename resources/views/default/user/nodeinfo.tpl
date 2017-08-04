@@ -40,7 +40,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                    {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'}
+                    {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'}
                         <p>当前模式仅支持带有混淆协议的客户端</p>
                         <input id="ss-qr-text" class="form-control" value="{$ssqr_s_n}">
                         <p></p>
@@ -61,13 +61,13 @@
             </div>
             <!-- /.col (right) -->
             
-             {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}
+             {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}
              <div class="col-md-6">
                 <div class="box box-solid">
                     <div class="box-header">
                         <i class="fa fa-qrcode"></i>
 
-                        <h3 class="box-title"> 新版ShadowsocksR配置二维码(V3.8.3以后版本)</h3>
+                        <h3 class="box-title"> ShadowsocksR配置二维码 </h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -78,33 +78,14 @@
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->
-            <div class="col-md-6">
-                <div class="box box-solid">
-                    <div class="box-header">
-                        <i class="fa fa-qrcode"></i>
-
-                        <h3 class="box-title"> 旧版ShadowsocksR配置二维码</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="text-center">
-                            <div id="ss-qr"></div>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->            
+            </div>        
             {else}
             <div class="col-md-6">
                 <div class="box box-solid">
                     <div class="box-header">
                         <i class="fa fa-qrcode"></i>
 
-                        <h3 class="box-title"> 新版ShadowsocksR配置二维码(V3.8.3以后版本)</h3>
+                        <h3 class="box-title"> ShadowsocksR配置二维码 </h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -115,28 +96,8 @@
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->
-            <div class="col-md-6">
-                <div class="box box-solid">
-                    <div class="box-header">
-                        <i class="fa fa-qrcode"></i>
-
-                        <h3 class="box-title"> 旧版ShadowsocksR配置二维码</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="text-center">
-                            <div id="ss-qr"></div>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->            
-            
-            
+            </div>         
+ 
            <div class="col-md-6">
                 <div class="box box-solid">
                     <div class="box-header">
@@ -220,22 +181,12 @@
 	          jQuery('#ss-qr-n').qrcode({
 		            "text": text_qrcode_n
 	          });
-	                      
-            var text_qrcode = '{$ssqr_s}';
-            jQuery('#ss-qr').qrcode({
-                "text": text_qrcode
-            });
           
             {else} 
             	
             var text_qrcode_n = '{$ssqr_s_n}';
 	          jQuery('#ss-qr-n').qrcode({
 		            "text": text_qrcode_n
-	          });
-	                      
-            var text_qrcode = '{$ssqr_s}';
-	          jQuery('#ss-qr').qrcode({
-		            "text": text_qrcode
 	          });
 	          	                     
             var text_qrcode_y = '{$ssqr}';

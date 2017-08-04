@@ -124,7 +124,7 @@ class UserController extends BaseController
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
         
-        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1')
+        if ($user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1')
 				{
 					$ssurl = $ary['server']. ":" . $ary['server_port'].":".str_replace("_compatible","",$user->protocol).":".$ary['method'].":".str_replace("_compatible","",$user->obfs).":".Tools::base64_url_encode($ary['password'])."/?obfsparam=".Tools::base64_url_encode($user->obfs_param)."&remarks=".Tools::base64_url_encode($node->name);
 					$ssqr_s_n = "ssr://" . Tools::base64_url_encode($ssurl);				
@@ -249,7 +249,7 @@ class UserController extends BaseController
         	$user->updateMethod($method);
         	$res['ret'] = 1;
         	return $this->echoJson($response, $res);
-        }        
+        }
         $res['ret'] = 0;
         $res['msg'] = "对不起，您无法自定义加密方法";
         return $this->echoJson($response, $res);

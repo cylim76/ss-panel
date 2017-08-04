@@ -88,7 +88,8 @@
 								<option value="auth_sha1_v4_compatible" {if $node->protocol=="auth_sha1_v4_compatible"}selected="selected"{/if}>auth_sha1_v4_compatible</option>
 								<option value="auth_aes128_md5" {if $node->protocol=="auth_aes128_md5"}selected="selected"{/if}>auth_aes128_md5</option>
 								<option value="auth_aes128_sha1" {if $node->protocol=="auth_aes128_sha1"}selected="selected"{/if}>auth_aes128_sha1</option>
-								<option value="auth_chain_a" {if $node->protocol=="auth_chain_a"}selected="selected"{/if}>auth_chain_a</option>																	
+								<option value="auth_chain_a" {if $node->protocol=="auth_chain_a"}selected="selected"{/if}>auth_chain_a</option>
+								<option value="auth_chain_b" {if $node->protocol=="auth_chain_b"}selected="selected"{/if}>auth_chain_b</option>
 							</select>
 						</div>
 					</div>
@@ -98,7 +99,7 @@
 
 
 						<div class="col-md-9">
-							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_chain_a" && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled"{/if}>
+							<input class="form-control" id="protocol_param" type="text" readonly="true" value="{$node->protocol_param}" {if $node->protocol != "auth_chain_a" && $node->protocol != "auth_chain_b" && $node->protocol != "auth_sha1_v4" && $node->protocol != "auth_aes128_md5" && $node->protocol != "auth_aes128_sha1"} disabled="disabled"{/if}>
 						</div>
 					</div>
 

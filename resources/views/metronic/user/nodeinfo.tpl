@@ -45,7 +45,7 @@
                       </div>
                   </div>
                   <div class="portlet-body">
-                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'}
+                  	{if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'}
                         <p>当前模式仅支持带有混淆协议的客户端</p>
                         <input id="ss-qr-text" class="form-control" value="{$ssqr_s_n}">
                         <p></p>
@@ -64,14 +64,14 @@
             	<!-- END Portlet PORTLET-->
      		</div>	
             
-        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
+        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
                   <div class="portlet-title">
                       <div class="caption">
                       		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> 新版ShadowsocksR配置二维码(V3.8.3以后版本) </strong></span>
+                          <span class="caption-subject bold"><strong> ShadowsocksR配置二维码 </strong></span>
                       </div>
                   </div>
                   <div class="portlet-body">
@@ -81,24 +81,7 @@
                  	</div>                                    	
             	</div>
             	<!-- END Portlet PORTLET-->
-     		</div>
-        <div class="col-md-6">
-              <!-- BEGIN Portlet PORTLET-->
-              <div class="portlet light bordered">
-                  <div class="portlet-title">
-                      <div class="caption">
-                      		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> 旧版ShadowsocksR配置二维码 </strong></span>
-                      </div>
-                  </div>
-                  <div class="portlet-body">
-                  	  <div class="text-center">
-                          <div id="ss-qr"></div>
-                      </div>                  	
-                 	</div>                                    	
-            	</div>
-            	<!-- END Portlet PORTLET-->
-     		</div>     		
+     		</div>    		
      		{else}
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
@@ -106,7 +89,7 @@
                   <div class="portlet-title">
                       <div class="caption">
                       		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> 新版ShadowsocksR配置二维码(V3.8.3以后版本) </strong></span>
+                          <span class="caption-subject bold"><strong> ShadowsocksR配置二维码 </strong></span>
                       </div>
                   </div>
                   <div class="portlet-body">
@@ -116,24 +99,7 @@
                  	</div>                                    	
             	</div>
             	<!-- END Portlet PORTLET-->
-     		</div>
-        <div class="col-md-6">
-              <!-- BEGIN Portlet PORTLET-->
-              <div class="portlet light bordered">
-                  <div class="portlet-title">
-                      <div class="caption">
-                      		<i class="fa fa-qrcode"></i>
-                          <span class="caption-subject bold"><strong> 旧版ShadowsocksR配置二维码 </strong></span>
-                      </div>
-                  </div>
-                  <div class="portlet-body">
-                  	  <div class="text-center">
-                          <div id="ss-qr"></div>
-                      </div>                  	
-                 	</div>                                    	
-            	</div>
-            	<!-- END Portlet PORTLET-->
-     		</div>     		
+     		</div>  		
      		<div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
@@ -219,24 +185,14 @@
             var text_qrcode_n = '{$ssqr_s_n}';
             jQuery('#ss-qr-n').qrcode({
                 "text": text_qrcode_n
-            });
-            
-            var text_qrcode = '{$ssqr_s}';
-            jQuery('#ss-qr').qrcode({
-                "text": text_qrcode
-            });            
+            });       
           
             {else} 
             	
             var text_qrcode_n = '{$ssqr_s_n}';
 	          jQuery('#ss-qr-n').qrcode({
 		            "text": text_qrcode_n
-	          });
-	          
-            var text_qrcode = '{$ssqr_s}';
-	          jQuery('#ss-qr').qrcode({
-		            "text": text_qrcode
-	          });	          
+	          });        
 	          	                     
             var text_qrcode_y = '{$ssqr}';
 	          jQuery('#ss-qr-y').qrcode({
