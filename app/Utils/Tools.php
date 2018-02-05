@@ -206,11 +206,16 @@ class Tools
         return $user->port;
     }
     
-		public function base64_url_encode($input) {
-			return strtr(base64_encode($input), '+/', '-_');
+	public function base64_url_encode($input) {
+		return str_replace(array('+','/','='),array('-','_',''),base64_encode($input));
+	}
+	
+	public function base64_url_decode($input) {
+		$data = str_replace(array('-','_'),array('+','/'),$input);
+		$mod4 = strlen($data) % 4;
+		if ($mod4) {
+			$data .= substr('====', $mod4);
 		}
-		
-		public function base64_url_decode($input) {
-			return base64_decode(strtr($input, '-_', '+/'));
-		}    
+		return base64_decode($data);
+	}
 }

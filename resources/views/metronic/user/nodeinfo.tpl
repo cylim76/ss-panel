@@ -64,7 +64,8 @@
             	<!-- END Portlet PORTLET-->
      		</div>	
             
-        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}		
+        {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_chain_b' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}
+		{if $user->obfs != 'plain' && $user->protocol != 'origin'}
         <div class="col-md-6">
               <!-- BEGIN Portlet PORTLET-->
               <div class="portlet light bordered">
@@ -180,7 +181,7 @@
         <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
         <script>
         	 
-            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1' || ( $user->obfs=='plain' && $user->protocol=='origin')}
+            {if $user->obfs=='http_simple' || $user->obfs=='http_post' || $user->obfs=='random_head' || $user->obfs=='tls1.2_ticket_auth' || $user->protocol=='verify_deflate' || $user->protocol=='auth_chain_a' || $user->protocol=='auth_sha1_v4' || $user->protocol=='auth_aes128_md5' || $user->protocol=='auth_aes128_sha1'}
           
             var text_qrcode_n = '{$ssqr_s_n}';
             jQuery('#ss-qr-n').qrcode({

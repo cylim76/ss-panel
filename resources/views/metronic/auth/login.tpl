@@ -27,7 +27,11 @@
        	 </label>
      	</div> 
     </form>
-     	<button id="login" type="submit" class="btn btn-lg btn-primary btn-block">登录</button>			
+		{if $user->isLogin}
+			<a href="/user" class="btn btn-lg btn-primary btn-block">登录</a>
+		{else}
+			<button id="login" type="submit" class="btn btn-lg btn-primary btn-block">登录</button>
+		{/if}
       <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
           <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
           <h4><i class="icon fa fa-check"></i> 登录成功!</h4>
